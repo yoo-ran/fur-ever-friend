@@ -1,0 +1,46 @@
+
+.banner button{
+    background-color: var(--blue);
+    color: var(--beige);
+    border: none;
+}
+
+
+@media screen and (max-width:796px) {
+    main {
+        row-gap: 10vh;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3vh;
+    }
+
+    .banner img {
+        width: 20em;
+    }
+
+    .banner h1 {
+        font-family: 'Fredoka', sans-serif;
+        color: var(--dark-brown);
+        font-size: 3.6em;
+        text-align: center;
+    }
+
+    .banner p {
+        width: 80%;
+        font-size: 1.4em;
+        text-align: center;
+        color: var(--orange);
+        line-height: 1.5;
+    }
+
+    .banner button {
+        width: 50%;
+        padding: 2vh;
+        border-radius: 0.4em;
+    }
+
+
+}
