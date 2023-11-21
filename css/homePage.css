@@ -42,5 +42,17 @@
         border-radius: 0.4em;
     }
 
+    .scrolla {
+        flex-direction: column;
+        row-gap: 4vh;
+        width: 90%;
+    }
+
+    .scrolla h2 {
+        color: var(--dark-brown);
+        font-family: 'Fredoka', sans-serif;
+        text-align: center;
+        font-size: 2em;
+    }
 
 }

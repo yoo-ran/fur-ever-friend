@@ -21,7 +21,7 @@ a {
     text-decoration: none;
 }
 
-body, header,main, footer, .banner {
+body, header,main, footer, .banner,.scrolla {
     display: flex;
     width: 100%;
 }

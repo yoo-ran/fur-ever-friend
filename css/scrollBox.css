@@ -13,6 +13,7 @@
     -moz-box-pack:justify;
     -ms-flex-pack:justify;
     justify-content:space-between;
+    width: 100%;
 
 }
 .boxes__item{
@@ -23,7 +24,6 @@
 }
 .box{
     width:100%;
-    background-color:#0074d9;
     -webkit-border-radius:0.8em;
     border-radius:0.8em
 }
@@ -31,8 +31,8 @@
 
 
 @media screen and (max-width:796px) {
+
     .boxes {
-        width: 70%;
         row-gap: 1em;
     }
     .boxes__item{
