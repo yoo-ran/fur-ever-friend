@@ -1,0 +1,595 @@
+body{
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.fa-chevron-left{
+    border-radius: 50%;
+    color: var(--dark-brown);
+    text-align: center;
+    font-weight: bold;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+}
+
+#top div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#top h1,#top p {
+    text-align: right;
+    font-family: "Fredoka";
+    color: var(--dark-brown);
+}
+
+div.search {
+    border: 1px solid var(--dark-brown);
+    display: flex;
+    align-items: center;
+}
+
+.search input{
+    background-color: transparent;
+    border: none;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search input::placeholder, .search i{
+    color: var(--dark-brown);
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#categories div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#categories p{
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+.categoryP {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--dark-brown);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.categoryP span{
+    color: var(--dark-brown);
+}
+
+#items > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#card {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#card h3, .fa-mars, .fa-venus {
+    color: var(--dark-brown);
+    font-family: "Fredoka";
+}
+
+.fa-heart {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+#card p , span, .fa-location-dot {
+    color: var(--brown);
+}
+
+.modal div, .modal{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.blocker {
+    background-color: rgba(0, 0, 0, 0.9) !important; 
+}
+
+.modal h3 {
+    color: var(--dark-brown);
+    font-family: "Fredoka";
+}
+
+.modal article{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal span{
+    background-color: var(--brown);
+    color: var(--white);
+    text-align: center;
+}
+
+.modal a {
+    border-radius: 2em;
+    text-transform: uppercase;
+}
+
+.modal h2{
+    color: var(--dark-brown);
+    font-family: "Fredoka";
+}
+
+.closeBtn, .clearBtn {
+    border: 1px solid var(--dark-brown);
+    color: var(--dark-brown);
+}
+
+.applyBtn {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+
+@media screen and (max-width:796px) {
+    main {
+        row-gap: 4vh;
+    }
+
+    .fa-chevron-left{
+        font-size: 1.5em;
+    }
+
+    .fa-heart {
+        font-size: 1.5em;
+    }
+
+    #top {
+        width: 80%;
+        row-gap: 1vh;
+    }
+
+    #top h1 {
+        font-size: 2.8em;
+    }
+    
+    #top p{
+        font-size: 1.6em;
+    }
+
+    div.search {
+        border-radius: 0.5em;
+        padding: 1vh 1.5vh;
+    }
+
+    .search i{
+        font-size: 1.5em;
+    }
+
+    .filterIcon {
+        width: 2em !important;
+    }
+
+    #categories {
+        width: 80%;
+        row-gap: 1vh;
+    }
+
+    #categories p{
+        font-size: 1.2em;
+    }
+
+    .categoryP {
+        width: 6em;
+        height: 6em;
+        row-gap: 0.5em;
+        border-radius: 0.8em;
+    }
+
+    .categoryP img {
+        width: 3em;
+    }
+
+    #items {
+        width: 80%;
+    }
+
+    #items > div{
+        row-gap: 2vh;
+        width: 100%;
+    }
+
+    #card {
+        width: 40%;
+        padding: 2vh;
+        border-radius: 1em;
+        row-gap: 0.5vh;
+    }
+
+    #card h3 {
+        font-size: 1.8em;
+    }
+
+    #card p , span, .fa-location-dot {
+        font-size: 0.8em;
+    }
+
+    #card img {
+        width: 100%;
+        border-radius: 1em;
+    }
+
+    .modal div{
+        margin-bottom: 3vh;
+        width: 100%;
+    }
+
+
+    .modal a {
+        padding: 0.5em 1.2em;
+    }
+
+    .modal h3 {
+        font-size: 1.6em;
+    }
+
+
+    .modal div {
+        row-gap: 0.5em;
+    }
+
+    .modal article {
+        column-gap: 1em;
+    }
+
+    .modal span {
+        width: 100%;
+        padding: 1vh;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+    }
+
+    span.all {
+        width: 100%;
+    }
+
+    .modal h2{
+        font-size: 2.2em;
+    }
+}
+
+
+@media  screen and (min-width:769px) and (max-width:1023px) {
+    main{
+        row-gap: 6vh;
+    }
+    main section {
+        width: 90%;
+    }
+
+    #top{
+        align-items: flex-start;
+        row-gap: 1.2vh;
+    }
+
+    .fa-chevron-left{
+        display: none !important;
+    }
+
+    #top p{
+        font-size: 2.4em;
+    }
+
+    #top h1 {
+        font-size: 4em;
+    }
+
+    .search {
+        padding: 1vh;
+        width: 30%;
+    }
+
+    .search i {
+        font-size: 1.4em;
+    }
+
+    #categories {
+        row-gap: 2vh;
+    }
+    
+    #categories p{
+        font-size: 2em;
+    }
+
+    .filterIcon {
+        width: 3em;
+    }
+    
+    .categoryP{
+        width: 7em;
+        height: 7em;
+        border-radius: 1.4em;
+    }
+
+    .categoryP span{
+        font-size: 1em;
+
+    }
+
+    .categoryP img {
+        width: 4em;
+    }
+
+    #items > div{
+        row-gap: 2vh;
+    }
+
+    #card {
+        width: 40%;
+        padding: 2vh;
+        border-radius: 1.6em;
+    }
+
+    #card img {
+        width: 90%;
+        margin-bottom: 2vh;
+        border-radius: 1em;
+    }
+    #card h3 {
+        font-size: 2.4em;
+    }
+
+    #card p, 
+    #card span,
+    #card i {
+        font-size: 1.4em;
+    }
+
+    .fa-heart{
+        font-size: 2em !important;
+    }
+
+    #ex1{
+        padding: 4vh ;
+    }
+
+    .modal {
+        width: 100%;
+    }
+  
+    .modal div{
+        margin-bottom: 3vh;
+        width: 100%;
+    }
+
+    .modal h2 {
+        font-size: 3em;
+    }
+
+    .modal h3 {
+        font-size: 2.2em;
+    }
+
+
+    .modal div {
+        row-gap: 0.5em;
+    }
+
+    .modal article {
+        column-gap: 1em;
+    }
+
+    .modal span {
+        width: 100%;
+        padding: 1vh;
+        border-radius: 0.5em;
+        font-size: 1.6em;
+    }
+
+    span.all {
+        width: 100%;
+    }
+
+    .modal a {
+        width: 40%;
+        text-align: center;
+        font-size: 1.6em;
+        padding: 0.8em 0;
+    }
+}
+
+
+@media  screen and (min-width:1024px) {
+    main{
+        row-gap: 6vh;
+    }
+    main section {
+        width: 70%;
+    }
+
+    #top{
+        align-items: flex-start;
+        row-gap: 1.2vh;
+    }
+
+    .fa-chevron-left{
+        display: none !important;
+    }
+
+    #top p{
+        font-size: 2.4em;
+    }
+
+    #top h1 {
+        font-size: 4em;
+    }
+
+    .search {
+        padding: 1vh;
+        width: 30%;
+    }
+
+    .search i {
+        font-size: 1.4em;
+    }
+
+    #categories {
+        row-gap: 2vh;
+    }
+
+    #categories div:first-child{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        row-gap: 2vh;
+
+    }
+
+    #categories div:nth-child(2){
+        justify-content: left;
+        column-gap: 1vh;
+    }
+
+    .filterIcon {
+        width: 3em;
+    }
+    
+    .categoryP{
+        width: 7em;
+        height: 7em;
+        border-radius: 1.4em;
+        row-gap: 0.6em;
+    }
+
+    .categoryP:hover {
+        background-color: var(--orange);
+    }
+
+    .categoryP span{
+        font-size: 1em;
+
+    }
+
+    .categoryP img {
+        width: 4em;
+    }
+
+    #items > div{
+        row-gap: 6vh;
+    }
+
+    #card {
+        width: 20%;
+        padding: 2vh;
+        border-radius: 1.6em;
+        row-gap: 0.8em;
+    }
+
+    #card img {
+        width: 90%;
+        margin-bottom: 2vh;
+        border-radius: 1em;
+    }
+    #card h3 {
+        font-size: 2.4em;
+    }
+
+    #card p, 
+    #card span,
+    #card i {
+        font-size: 1.4em;
+    }
+
+    .fa-location-dot{
+        font-size: 1em !important;
+        margin-right: 0.4em;
+    }
+
+    .fa-heart{
+        font-size: 2em !important;
+    }
+
+    .fa-mars, .fa-venus {
+        font-size: 1em !important;
+    }
+
+    #ex1{
+        padding: 4vh ;
+    }
+
+    .modal {
+        width: 100%;
+    }
+  
+    .modal div{
+        margin-bottom: 3vh;
+        width: 100%;
+    }
+
+    .modal h2 {
+        font-size: 3em;
+    }
+
+    .modal h3 {
+        font-size: 2.2em;
+    }
+
+
+    .modal div {
+        row-gap: 0.5em;
+    }
+
+    .modal article {
+        column-gap: 1em;
+    }
+
+    .modal span {
+        width: 100%;
+        padding: 1vh;
+        border-radius: 0.5em;
+        font-size: 1.6em;
+    }
+
+    span.all {
+        width: 100%;
+    }
+
+    .modal a {
+        width: 40%;
+        text-align: center;
+        font-size: 1.6em;
+        padding: 0.8em 0;
+    }
+}

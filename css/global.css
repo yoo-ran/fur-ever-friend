@@ -39,17 +39,43 @@ body{
 
 header {
     justify-content: center;
-    column-gap: 70%;
 }
 
+
+header li:hover a,
+header li:hover i{
+    color:var(--orange);
+}
 
 header li {
     text-align: center;
 }
 
+.dropdownMenu a {
+    color: var(--dark-brown);
+    font-family: "Fredoka";
+}
+
+.iconMenu {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 footer {
     background-color: var(--dark-brown);
+    justify-content: center;
+
+}
+
+footer >ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer li, i{
+    color: var(--gray);
 }
 
 .socialmedia{
@@ -57,51 +83,16 @@ footer {
     column-gap: 1em;
 }
 
-.callToAction h2, .callToAction p {
-    color: var(--white);
-}
-.callToAction {
-    flex-direction: column;
-    align-items: center;
-    background: url(https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    background-size: cover;
-    background-position: center;
- }
 
- .callToAction::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
 
-.callToAction h2{
-    font-family: 'Fredoka', sans-serif;
-    z-index: 1;
-    text-align: center;
-}
-
-.callToAction p {
-    width: 80%;
-    text-align: center;
-    line-height: 1.5;
-    z-index: 1;
-}
-
- .callToAction a {
-    background-color: var(--blue);
-    text-align: center;
-    z-index: 1;
-    color: var(--white);
-}
-
-@media screen and (max-width:796px) {
+@media screen and (max-width:768px) {
 
     body {
         row-gap: 5vh;
+    }
+
+    header {
+        column-gap: 70%;
     }
 
     .dropdownMenu {
@@ -118,8 +109,6 @@ footer {
     }
 
     .iconMenu {
-        display: flex;
-        justify-content: center;
         column-gap: 1em;
     }
     header {
@@ -187,15 +176,12 @@ footer {
    
 
     footer {
-        justify-content: center;
         padding: 4vh 0;
         column-gap: 3vh;
     }
 
 
     footer >ul {
-        display: flex;
-        flex-direction: column;
         row-gap: 1vh;
     }
 
@@ -209,12 +195,125 @@ footer {
     footer li, i{
         color: var(--gray);
         font-size: 0.8em;
+    }    
+}
+
+@media  screen and (min-width:769px) and (max-width:1023px) {
+    body{
+        row-gap: 6vh;
     }
 
-    .newsletter {
-        width: 100%;
+    header {
+        padding: 4vh 0;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .menu-trigger{
+        display: none;
+    }
+
+    nav.dropdownMenu {
+        display:flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .dropdownMenu .menu,
+    .dropdownMenu .iconMenu {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.4em;
+    }
+
+    .dropdownMenu a {
+        font-size: 2.4em;
+    } 
+
+    .dropdownMenu a:focus{
+        color: var(--orange);
+    }
+
+    .dropdownMenu i{
+        color: var(--dark-brown);
+    }
+
+    footer {
+        padding: 4vh 0;
+        column-gap: 8vh;
+    }
+
+    footer ul {
+        row-gap: 0.5vh;
+    }
+
+    footer h2 {
+        font-size: 1.2em;
+    }
+
+    footer li,
+    footer a{
+        font-size: 1.4em;
+    }
+}
+
+
+@media  screen and (min-width:1024px) {
+    body{
+        row-gap: 6vh;
+    }
+
+    header {
+        padding: 4vh 0;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .menu-trigger{
+        display: none;
+    }
+
+    nav.dropdownMenu {
+        display:flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .dropdownMenu .menu,
+    .dropdownMenu .iconMenu {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.4em;
     }
 
 
-    
+    .dropdownMenu a {
+        font-size: 2.4em;
+    } 
+
+    .dropdownMenu a:focus{
+        color: var(--orange);
+    }
+
+    .dropdownMenu i{
+        color: var(--dark-brown);
+    }
+
+    footer {
+        padding: 8vh 0;
+        column-gap: 10%;
+    }
+
+    footer ul {
+        row-gap: 0.5vh;
+    }
+
+    footer h2 {
+        font-size: 1.2em;
+    }
+
+    footer li,
+    footer a{
+        font-size: 1.6em;
+    }
 }

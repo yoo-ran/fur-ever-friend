@@ -7,7 +7,7 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="./css/global.css">
     <!-- Pet page CSS -->
-    <link rel="stylesheet" href="./css/petPage.css">
+    <link rel="stylesheet" href="./css/pages/petPage.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Modal CSS -->
@@ -59,7 +59,7 @@
                 <div>
                     <h3>Gender</h3>
                     <article>
-                        <span data-filter=""  class='all'>All</span>
+                        <span data-filter="" class='all'>All</span>
                     </article>
                     <article>
                         <span data-filter="male">Male</span>
@@ -101,6 +101,7 @@
                     <a href="#" rel="modal:close" class='applyBtn'>Apply</a>
                 </article>
             </section>
+
             <section id='top' >
                 <div>
                     <i class="fa-solid fa-chevron-left"></i>
@@ -112,17 +113,18 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </section>
+
             <section id='categories'>
                 <div>
                     <p>Categories</p>
                     <a href="#ex1" rel="modal:open" class='filterIcon'><img src="./images/categories/filter.png" alt="Filter Icon" class='filterIcon'></a>
                 </div>
                 <div>
-                    <span data-filter="">All</span>
-                    <span data-filter="cat"><img src="./images/categories/cat.png" alt="Cat Category">Cat</span>
-                    <span data-filter="dog"><img src="./images/categories/dog.png" alt="Dog Category">Dog</span>
-                    <span data-filter="fish"><img src="./images/categories/fish.png" alt="Fish Category">Fish</span>
-                    <span data-filter="bird"><img src="./images/categories/bird.png" alt="Bird Category">Bird</span>
+                    <p class='categoryP' data-filter="">All</p>
+                    <p class='categoryP' data-filter="cat"><img src="./images/categories/cat.png" alt="Cat Category"><span>Cat</span></p>
+                    <p class='categoryP' data-filter="dog"><img src="./images/categories/dog.png" alt="Dog Category"><span>Dog</span></p>
+                    <p class='categoryP' data-filter="fish"><img src="./images/categories/fish.png" alt="Fish Category"><span>Fish</span></p>
+                    <p class='categoryP' data-filter="bird"><img src="./images/categories/bird.png" alt="Bird Category"><span>Bird</span></p>
                 </div>
             </section>
             <section id='items'>
@@ -214,6 +216,21 @@
                         </article>
                         <article>
                             <span>0.3 Years</span>
+                            <span>200m</span>
+                        </article>
+                    </div>
+                    <div data-tags="cat,female,one,0.5" class="show" id='card'>
+                        <img src="./images/slides/pet13.jpg" alt="Nemo" >
+                        <article>
+                            <h3>Navi<i class="fa-solid fa-venus"></i></h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Cat</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Robson St</p>
+                        </article>
+                        <article>
+                            <span>1 Year</span>
                             <span>200m</span>
                         </article>
                     </div>
