@@ -1,0 +1,94 @@
+
+
+main h3, main h1, .fa-paw {
+    font-family: "Fredoka";
+    color: var(--dark-brown);
+}
+
+label {
+    color: var(--brown);
+}
+
+.btn-primary {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--white) !important;
+}
+
+input, textarea {
+    border: 1px solid var(--orange) !important;
+}
+
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#information li,
+#information i {
+    color: var(--brown);
+}
+
+#information > div {
+    display: flex;
+    flex-direction: column;
+}
+
+main section{
+    width: 80%;
+}
+
+main article {
+    width: 100%;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--beige) !important;
+    border: 1px solid var(--beige) !important;
+    box-shadow: 1px 1px 2px var(--beige) !important;
+    color: var(--dark-brown) !important;
+}
+
+.accordion-button:focus{
+    border: 1px solid var(--beige) !important;
+
+}
+
+@media screen and (max-width:796px) {
+    main {
+        row-gap: 6vh;
+    }
+    .formInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 6vh;
+
+    }
+
+    main h1 {
+        font-size: 2.4em;
+    }
+
+    main h3 {
+        font-size: 1.6em;
+    }
+
+   
+
+    #information{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #information > div {
+        row-gap: 2vh;
+    }
+
+
+    #information i,
+    #information li {
+        font-size: 1.2em;
+    }
+
+}

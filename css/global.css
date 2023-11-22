@@ -32,9 +32,10 @@ body, main {
     align-items: center;
 }
 
-body {
-    row-gap: 20vh;
+body{
+    background-color: var(--white);
 }
+
 
 header {
     justify-content: center;
@@ -100,7 +101,7 @@ footer {
 @media screen and (max-width:796px) {
 
     body {
-        background-color: var(--white);
+        row-gap: 5vh;
     }
 
     .dropdownMenu {

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <!-- Global CSS -->
     <link rel="stylesheet" href="./css/global.css">
-    <!-- Home page CSS -->
+    <!-- Pet page CSS -->
+    <link rel="stylesheet" href="./css/petPage.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Filter CSS -->
+    <!-- Modal CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <title>Fur-Ever Friend</title>
 </head>
@@ -34,51 +36,187 @@
             </a>
         </header>
         <main>
-            <section id='filter'>
+            <section id="ex1" class="modal">
                 <div>
-                    <h3>species</h3>
-                    <span data-filter="">All</span>
-                    <span data-filter="cat">Cats</span>
-                    <span data-filter="dog">Dogs</span>
-                    <span data-filter="monkey">Monkeys</span>
+                    <h2>Filters</h2>
+                </div>
+                <div>
+                    <h3>Species</h3>
+                    <article>
+                        <span data-filter=""  class='all'>All</span>
+                    </article>
+                    <article>
+                        <span data-filter="cat">Cat</span>
+                        <span data-filter="dog">Dog</span>
+                        <span data-filter="fish">Fish</span>
+                        <span data-filter="bird">Bird</span>
+                    </article>
+                    <article>
+                        <span data-filter="rodent">Rodents</span>
+                        <span data-filter="others">Others</span>
+                    </article>
                 </div>
                 <div>
                     <h3>Gender</h3>
-                    <span data-filter="">All</span>
-                    <span data-filter="male">Male</span>
-                    <span data-filter="female">Female</span>
+                    <article>
+                        <span data-filter=""  class='all'>All</span>
+                    </article>
+                    <article>
+                        <span data-filter="male">Male</span>
+                        <span data-filter="female">Female</span>
+                    </article>
                 </div>
+                <div>
+                    <h3>Age(Years)</h3>
+                    <article>
+                        <span data-filter="" class='all'>All</span>
+                    </article>
+                    <article>
+                        <span data-filter="one">0~1</span>
+                        <span data-filter="three">1~3</span>
+                        <span data-filter="five">3~5</span>
+                        <span data-filter="seven">5~7</span>
+                        <span data-filter="nine">7~9</span>
+                        <span data-filter="nineplus">9+</span>
+                    </article>
+                </div>
+                <div>
+                    <h3>Location(km)</h3>
+                    <article>
+                        <span data-filter="" class='all'>All</span>
+                    </article>
+                    <article>
+                        <span data-filter="0.1">~0.1</span>
+                        <span data-filter="0.5">0.1~0.5</span>
+                        <span data-filter="1">0.5~1</span>
+                    </article>
+                    <article>
+                        <span data-filter="5">1~5</span>
+                        <span data-filter="7">5~7</span>
+                        <span data-filter="7+">7+</span>
+                    </article>
+                </div>
+                <article>
+                    <a href="#" class='clearBtn' data-filter="">Clear</a>
+                    <a href="#" rel="modal:close" class='applyBtn'>Apply</a>
+                </article>
             </section>
             <section id='top' >
-                <p></p>
-                <h1></h1>
-                <label for="">
-                    <input type="text">
+                <div>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <p>Find Your Favorite</p>
+                </div>
+                <h1>Pet to Adopt!</h1>
+                <div class='search'>
+                    <input type="text" placeholder='Search'>
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </label>
-                <ul>
-                    <li>Filter</li>
-                    <li></li>
-                </ul>
+                </div>
             </section>
             <section id='categories'>
-                <ul>
-                    <li>Categories</li>
-                    <li>See All +</li>
-                </ul>
+                <div>
+                    <p>Categories</p>
+                    <a href="#ex1" rel="modal:open" class='filterIcon'><img src="./images/categories/filter.png" alt="Filter Icon" class='filterIcon'></a>
+                </div>
                 <div>
                     <span data-filter="">All</span>
-                    <span data-filter="cat">Cats</span>
-                    <span data-filter="dog">Dogs</span>
-                    <span data-filter="monkey">Monkeys</span>
+                    <span data-filter="cat"><img src="./images/categories/cat.png" alt="Cat Category">Cat</span>
+                    <span data-filter="dog"><img src="./images/categories/dog.png" alt="Dog Category">Dog</span>
+                    <span data-filter="fish"><img src="./images/categories/fish.png" alt="Fish Category">Fish</span>
+                    <span data-filter="bird"><img src="./images/categories/bird.png" alt="Bird Category">Bird</span>
                 </div>
             </section>
             <section id='items'>
                 <div>
-                    <div data-tags="dog,cat,male" class="show" style="display: block;">Some pretty cats and dogs!</div>
-                    <div data-tags="dog,female" class="show" style="display: block;">Some pretty Dogs</div>
-                    <div data-tags="cat,monkey,male" class="" style="display: none;">Cats and Monkeys!</div>
-                    <div data-tags="monkey,female" class="" style="display: none;">Only Monkeys!</div>
+                    <div data-tags="dog,male,seven,1" class="show" id='card'>
+                        <img src="./images/slides/pet08.jpg" alt="Dexter" >
+                        <article>
+                            <h3>Dexter<i class="fa-solid fa-mars"></i></h3>
+                            <i class="fa-solid fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Golden Retriever</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Seymour St</p>
+                        </article>
+                        <article>
+                            <span>6 Years</span>
+                            <span>800m</span>
+                        </article>
+                    </div>
+                    <div data-tags="cat,female,three,5" class="show" id='card'>
+                        <img src="./images/slides/pet16.jpg" alt="Dexter" >
+                        <article>
+                            <h3>Lulu<i class="fa-solid fa-venus"></i></h3>
+                            <i class="fa-solid fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Toyger</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Davie St</p>
+                        </article>
+                        <article>
+                            <span>3 Years</span>
+                            <span>400m</span>
+                        </article>
+                    </div>
+                    <div data-tags="dog,male,three,0.5" class="show" id='card'>
+                        <img src="./images/slides/pet10.jpg" alt="Mark" >
+                        <article>
+                            <h3>Mark<i class="fa-solid fa-mars"></i></h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Poodle</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Cambie St</p>
+                        </article>
+                        <article>
+                            <span>2 Years</span>
+                            <span>500m</span>
+                        </article>
+                    </div>
+                    <div data-tags="bird,female,one,0.5" class="show" id='card'>
+                        <img src="./images/slides/pet03.jpg" alt="Carina" >
+                        <article>
+                            <h3>Carina<i class="fa-solid fa-venus"></i></h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Moking Bird</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Granville St</p>
+                        </article>
+                        <article>
+                            <span>1 Years</span>
+                            <span>200m</span>
+                        </article>
+                    </div>
+                    <div data-tags="hamster,female,one,0.1" class="show" id='card'>
+                        <img src="./images/slides/pet01.jpg" alt="Milo" >
+                        <article>
+                            <h3>Milo<i class="fa-solid fa-venus"></i></h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Hamster</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Smithe St</p>
+                        </article>
+                        <article>
+                            <span>0.5 Years</span>
+                            <span>100m</span>
+                        </article>
+                    </div>
+                    <div data-tags="fish,male,one,0.5" class="show" id='card'>
+                        <img src="./images/slides/fish.jpg" alt="Nemo" >
+                        <article>
+                            <h3>Nemo<i class="fa-solid fa-mars"></i></h3>
+                            <i class="fa-regular fa-heart"></i>
+                        </article>
+                        <article>
+                            <p>Guppy</p>
+                            <p><i class="fa-solid fa-location-dot"></i>Howe St</p>
+                        </article>
+                        <article>
+                            <span>0.3 Years</span>
+                            <span>200m</span>
+                        </article>
+                    </div>
                 </div>
             </section>
 
@@ -103,7 +241,7 @@
                     <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </ul>
-    
+            
         </footer>
 
         <!-- jquery -->
@@ -113,8 +251,29 @@
         <script src='./js/global.js'></script>
 
         <!-- Filter JS -->
-        <script src='./js/autofilter.js'>
-        
+        <script src='./js/autofilter.js'></script>
+
+        <!-- Modal CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script>
+            $(".modal span").mousedown(function(){
+                if(this.style.backgroundColor=="var(--dark-brown)"){
+                    this.style.backgroundColor = "var(--brown)";
+                }else{
+                    this.style.backgroundColor = "var(--dark-brown)";
+                }
+            })
+            $(".clearBtn").click(function(){
+                $(".modal span").css("background-color","var(--brown)");
+            })
+            $(".fa-heart").click(function(){
+                if(this.className == "fa-solid fa-heart"){
+                    this.className = "fa-regular fa-heart"
+                }else{
+                    this.className = "fa-solid fa-heart"
+                }
+            })
+
         </script>
     </body>
 </html>
