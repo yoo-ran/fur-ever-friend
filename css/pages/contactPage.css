@@ -1,5 +1,7 @@
 
-
+body{
+    background-color: var(--white) !important;
+}
 main h3, main h1, .fa-paw {
     font-family: "Fredoka";
     color: var(--dark-brown);
@@ -247,7 +249,4 @@ main article {
         font-size: 1.4em;
     }
 
-    .accordion-body{
-        font-size: 1.6em;
-    }
 }

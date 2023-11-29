@@ -16,12 +16,13 @@
     <!-- Flickity  -->
     <link rel="stylesheet" href="/css/flickity.min.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>Fur-Ever Friend</title>
 </head>
     <body>
         <header>
-            <h1>Logo</h1>
+            <h1><img src="/images/logoHeader.png" alt=""></h1>
             <nav class='dropdownMenu'>
                 <ul class='menu'>
                     <li><a href="index.html">Home</a></li>
@@ -51,53 +52,95 @@
                 </article>
             </section>
 
-            <section class="posts" id="posts">
 
-            <div class="container">
-                <div class="main-carousel">
-
-                    <div class="carousel-cell">
-                        <div class="card" style="background-image: url('./images/banner.png');">
-                            <div class="card__content">
-                                <h3>Game Over</h3>
-                                <p>Theorycraft XP gank lag wanted level slow-down continue draw distance Wombo Combo aimbot hyperspace Frogger.</p>
-                                <button>Read Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card" style="background-image: url('./images/banner.png');">
-                            <div class="card__content">
-                                <h3>Game Over</h3>
-                                <p>Theorycraft XP gank lag wanted level slow-down continue draw distance Wombo Combo aimbot hyperspace Frogger.</p>
-                                <button>Read Now</button>
-                            </div>
-                        </div>
-                    </div>   
-                    
-                    <div class="carousel-cell">
-                        <div class="card" style="background-image: url('./images/banner.png');">
-                            <div class="card__content">
-                                <h3>Game Over</h3>
-                                <p>Theorycraft XP gank lag wanted level slow-down continue draw distance Wombo Combo aimbot hyperspace Frogger.</p>
-                                <button>Read Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-cell">
-                        <div class="card" style="background-image: url('./images/banner.png');">
-                            <div class="card__content">
-                                <h3>Game Over</h3>
-                                <p>Theorycraft XP gank lag wanted level slow-down continue draw distance Wombo Combo aimbot hyperspace Frogger.</p>
-                                <button>Read Now</button>
-                            </div>
-                        </div>
-                    </div>  
+        <!-- Swiper -->
+        <section id='swiper'>
+            <h2>Meet Our Fur-Ever Friends</h2>
+            <div #swiperRef="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/slides/pet08.jpg" alt="Dexter" >
+                    <article>
+                        <h3>Dexter<i class="fa-solid fa-mars"></i></h3>
+                        <i class="fa-solid fa-heart"></i>
+                    </article>
+                    <article>
+                        <p>Golden Retriever</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Seymour St</p>
+                    </article>
+                    <article>
+                        <span>6 Years</span>
+                        <span>800m</span>
+                    </article>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <img src="./images/slides/pet16.jpg" alt="Dexter" >
+                    <article>
+                        <h3>Lulu<i class="fa-solid fa-venus"></i></h3>
+                        <i class="fa-solid fa-heart"></i>
+                    </article>
+                    <article>
+                        <p>Toyger</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Davie St</p>
+                    </article>
+                    <article>
+                        <span>3 Years</span>
+                        <span>400m</span>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/slides/pet10.jpg" alt="Mark" >
+                    <article>
+                        <h3>Mark<i class="fa-solid fa-mars"></i></h3>
+                        <i class="fa-regular fa-heart"></i>
+                    </article>
+                    <article>
+                        <p>Poodle</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Cambie St</p>
+                    </article>
+                    <article>
+                        <span>2 Years</span>
+                        <span>500m</span>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/slides/pet03.jpg" alt="Carina" >
+                    <article>
+                        <h3>Carina<i class="fa-solid fa-venus"></i></h3>
+                        <i class="fa-regular fa-heart"></i>
+                    </article>
+                    <article>
+                        <p>Moking Bird</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Granville St</p>
+                    </article>
+                    <article>
+                        <span>1 Years</span>
+                        <span>200m</span>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/slides/pet01.jpg" alt="Milo" >
+                    <article>
+                        <h3>Milo<i class="fa-solid fa-venus"></i></h3>
+                        <i class="fa-regular fa-heart"></i>
+                    </article>
+                    <article>
+                        <p>Hamster</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Smithe St</p>
+                    </article>
+                    <article>
+                        <span>0.5 Years</span>
+                        <span>100m</span>
+                    </article>
+                  </div>
                 </div>
-             </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
         </section>
+
         <section class='scrolla'>
             <h2>Our Fur-Ever Friends <br> who found their homes&#9829;</h2>
             <div class="boxes">
@@ -127,7 +170,7 @@
         </section>
         </main>
         <footer>
-            <h1>logo</h1>
+            <h1><img src="/images/logoFooter.png" alt=""></h1>
             <ul>
                 <li><h2>Address</h2></li>
                 <li>555 Seymout St, BC</li>
@@ -152,8 +195,6 @@
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- Global js -->
-        <script src='./js/global.js'></script>
         <!-- Scrolla -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/jquery.scrolla.min.js"></script>
@@ -161,6 +202,30 @@
 
         <!-- Flickity -->
         <script src='./js/flickity.pkgd.min.js'></script>
+       
+        
+        <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+        <!-- Global js -->
+        <script src='./js/global.js'></script>
 
     </body>
 </html>

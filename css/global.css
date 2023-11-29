@@ -38,7 +38,8 @@ body{
 
 
 header {
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -50,6 +51,8 @@ header li:hover i{
 header li {
     text-align: center;
 }
+
+
 
 .dropdownMenu a {
     color: var(--dark-brown);
@@ -92,12 +95,17 @@ footer li, i{
     }
 
     header {
-        column-gap: 70%;
+        width: 90%;
     }
+
+    header img{
+        width: 3em;
+    }
+
 
     .dropdownMenu {
         position: absolute;
-        top: 40px;
+        top: 5em;
         right: 0;
         background-color: var(--orange);
         display: none;
@@ -121,23 +129,24 @@ footer li, i{
     header li:hover {
         background-color: var(--dark-brown);
     }
-
     header a, header i {
         color: var(--beige);
     }
 
+
+
     .menu-trigger,
     .menu-trigger span {
-    display: inline-block;
-    transition: all 0.4s;
-    box-sizing: border-box;
+        display: inline-block;
+        transition: all 0.4s;
+        box-sizing: border-box;
     }
 
     .menu-trigger {
-    position: relative;
-    width: 20px;
-    height: 15px;
-    display: flex;
+        position: relative;
+        width: 2em;
+        height: 1.5em;
+        display: flex;
     }
 
     .menu-trigger span {
@@ -185,6 +194,9 @@ footer li, i{
         row-gap: 1vh;
     }
 
+    footer img{
+        width: 3em;
+    }
   
 
     footer h2{
@@ -205,8 +217,12 @@ footer li, i{
 
     header {
         padding: 4vh 0;
-        width: 80%;
-        justify-content: space-between;
+        width: 90%;
+    }
+
+    header img,
+    footer img{
+        width: 4em;
     }
 
     .menu-trigger{
@@ -216,7 +232,7 @@ footer li, i{
     nav.dropdownMenu {
         display:flex;
         justify-content: space-between;
-        width: 90%;
+        width: 80%;
     }
 
     .dropdownMenu .menu,
@@ -268,6 +284,8 @@ footer li, i{
         width: 80%;
         justify-content: space-between;
     }
+    
+    hea
 
     .menu-trigger{
         display: none;

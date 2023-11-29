@@ -22,11 +22,42 @@
     color: var(--orange);
     line-height: 1.5;
 }
+.swiper-slide {
+    background: var(--beige);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .swiper-slide article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .swiper-pagination{
+    color: var(--dark-brown) !important;
+  }
+
+.swiper-button-next,
+.swiper-button-prev{
+    color: var(--dark-brown) !important;
+}
+
+
 .scrolla {
     flex-direction: column;
 }
 
-.scrolla h2 {
+.scrolla h2,
+#swiper h2,
+#swiper h3 {
     color: var(--dark-brown);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
@@ -110,6 +141,43 @@
         border-radius: 0.4em;
     }
 
+    .swiper-slide {
+        width: 14em !important;
+        height: 16em !important;
+        font-size: 1.2em;
+        padding: 2vh;
+        row-gap: 1vh;
+        border-radius: 1em;
+    }
+
+  
+      .swiper-slide img {
+        width: 10em;
+        height: 10em;
+        border-radius: 1em;
+      }
+
+      .swiper-slide article {
+        width: 90%;
+      }
+  
+      .swiper {
+        width: 100%;
+        height: 25em;
+      }
+
+      #swiper{
+        width: 90%;
+      }
+
+      #swiper h2{
+        margin-bottom: 5vh;
+      }
+
+      .swiper-pagination{
+        font-size: 1.4em;
+      }
+
     .scrolla {
         flex-direction: column;
         row-gap: 4vh;
@@ -145,6 +213,7 @@
 
     main {
         row-gap: 8vh;
+
     }
 
 
@@ -177,13 +246,51 @@
         border-radius: 1em;
     }
 
+    .swiper-slide {
+        width: 14em !important;
+        height: 20em !important;
+        font-size: 18px;
+        padding: 2vh;
+        row-gap: 1vh;
+        border-radius: 1em;
+    }
+
+  
+      .swiper-slide img {
+        width: 12em;
+        height: 12em;
+        border-radius: 1em;
+      }
+
+      .swiper-slide article {
+        width: 90%;
+      }
+  
+      .swiper {
+        width: 100%;
+        height: 48em;
+      }
+
+      #swiper {
+        width: 90%;
+      }
+
+      #swiper h2{
+        margin-bottom: 5vh;
+      }
+
+      .swiper-pagination{
+        font-size: 1.8em;
+      }
+
     .scrolla {
         row-gap: 4vh;
         width: 90%;
 
     }
 
-    .scrolla h2 {
+    .scrolla h2,
+    #swiper h2 {
         font-size: 2.8em;
     }
 
@@ -214,9 +321,8 @@
 @media screen and (min-width:1024px) {
 
     main {
-        row-gap: 12vh;
+        row-gap: 16vh;
     }
-
 
     .banner img {
         width: 35em;
@@ -225,6 +331,7 @@
     .banner {
         width: 80%;
         justify-content: space-around;
+        align-items: center;
     }
 
     .banner article {
@@ -233,7 +340,7 @@
     }
 
     .banner h1 {
-        font-size: 4em;
+        font-size: 4.5em;
 
     }
 
@@ -246,7 +353,46 @@
         width: 30%;
         padding: 1vh;
         border-radius: 1em;
+        cursor: pointer;
     }
+
+    .banner button:hover {
+        background-color: var(--dark-brown);
+    }
+
+  
+    .swiper-slide {
+        width: 18em !important;
+        height: 22em !important;
+        font-size: 18px;
+        padding: 2vh;
+        row-gap: 1vh;
+        border-radius: 1em;
+    }
+
+  
+      .swiper-slide img {
+        width: 15em;
+        height: 15em;
+        border-radius: 1em;
+      }
+
+      .swiper-slide article {
+        width: 90%;
+      }
+  
+      .swiper {
+        width: 60%;
+        height: 48em;
+      }
+
+      #swiper h2{
+        margin-bottom: 5vh;
+      }
+
+      .swiper-pagination{
+        font-size: 2em;
+      }
 
     .scrolla {
         row-gap: 4vh;
@@ -254,8 +400,10 @@
 
     }
 
-    .scrolla h2 {
+    h2 {
         font-size: 2.8em;
+        font-family: "Fredoka";
+        color: var(--dark-brown);
     }
 
     .boxes {
@@ -281,5 +429,9 @@
         padding: 1vh 1.8vh;
         font-size: 1.6em;
         border-radius: 0.6em;
+    }
+
+    .callToAction a:hover{
+        background-color: var(--dark-brown);
     }
 }
