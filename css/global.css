@@ -276,7 +276,7 @@ footer li, i{
 
 @media  screen and (min-width:1024px) {
     body{
-        row-gap: 6vh;
+        row-gap: 6.2vh;
     }
 
     header {
