@@ -1,10 +1,23 @@
 
 body{
     background-color: var(--white) !important;
+    padding-top: 10em;
 }
+
+
 main h3, main h1, .fa-paw {
     font-family: "Fredoka";
     color: var(--dark-brown);
+}
+main {
+    row-gap: 3em;
+}
+main h1 {
+    font-size: 3.6em;
+}
+
+main h3{
+    font-size: 1.6em;
 }
 
 a {
@@ -28,6 +41,19 @@ input, textarea {
 ul{
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.formInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6vh;
+    width: 90%;
+}
+
+#information{
+    display: flex;
+    justify-content: space-between;
 }
 
 #information p,
@@ -65,28 +91,13 @@ main article {
 }
 
 @media screen and (max-width:796px) {
-    main {
-        row-gap: 6vh;
-    }
-    .formInfo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 6vh;
-
-    }
-
-    main h1 {
-        font-size: 2.4em;
-    }
+    
 
     main h3 {
-        font-size: 1.6em;
     }
 
     #information{
-        display: flex;
-        justify-content: space-between;
+       
     }
 
     .infoBox {
@@ -105,12 +116,10 @@ main article {
     }
 
     .formInfo{
-        display: flex;
-        width: 90%;
+      
     }
 
     main h1 {
-        font-size: 3.6em;
     }
 
     main h3 {
@@ -233,8 +242,26 @@ main article {
         row-gap: 2vh;
     }
 
+    /* Map */
+    #map {
+        width: 100%;
+        height: 40em;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .map {
+        width: 90%;
+        height:30em;
+    }
+        
+    /* FAQs */
     #faqs{
-        width: 40%;
+        width: 70%;
     }
 
     #faqs h2 {
@@ -249,4 +276,5 @@ main article {
         font-size: 1.4em;
     }
 
+    
 }

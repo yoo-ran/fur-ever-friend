@@ -1,7 +1,9 @@
 *{margin:0;padding:0;font-family: 'Open Sans', sans-serif;}
+
 html {
     font-size: 10px;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap');
 :root {
     --dark-brown:#4a2b09;
@@ -21,6 +23,7 @@ a {
     text-decoration: none;
 }
 
+
 body, header,main, footer, .banner,.scrolla, .callToAction {
     display: flex;
     width: 100%;
@@ -36,49 +39,70 @@ body{
     background-color: var(--white);
 }
 
-
+/* Header */
 header {
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 8em;
+    padding: 0 4em;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    background-color: var(--beige);
 }
 
-
-header li:hover a,
-header li:hover i{
-    color:var(--orange);
+header img{
+    width: 3em;
 }
 
 header li {
     text-align: center;
+    padding: 0.8em;
+
 }
 
-
-
 .dropdownMenu a {
-    color: var(--dark-brown);
     font-family: "Fredoka";
+}
+
+.dropdownMenu a, .dropdownMenu i {
+    font-size: 1.3em;
+}
+
+.dropdownMenu a:focus{
+    color: var(--orange);
 }
 
 .iconMenu {
     display: flex;
     justify-content: center;
+    column-gap: 1em;
+
 }
 
-
-
+/* Footer */
 footer {
     background-color: var(--dark-brown);
     justify-content: center;
+    padding: 4em 0;
+    column-gap: 3em;
+}
+
+footer img{
+    width: 3em;
 
 }
 
 footer >ul {
     display: flex;
     flex-direction: column;
+    row-gap: 1em;
 }
 
 footer li, i{
     color: var(--gray);
+    font-size: 1em;
 }
 
 .socialmedia{
@@ -86,28 +110,26 @@ footer li, i{
     column-gap: 1em;
 }
 
+footer h2{
+    font-size: 1em;
+    text-decoration: underline;
+}
+
 
 
 @media screen and (max-width:768px) {
-
-    body {
-        row-gap: 5vh;
+    html{
+        font-size: 10px;
     }
-
-    header {
-        width: 90%;
-    }
-
-    header img{
-        width: 3em;
-    }
-
 
     .dropdownMenu {
         position: absolute;
-        top: 5em;
+        top: 6em;
         right: 0;
         background-color: var(--orange);
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
         display: none;
     }
 
@@ -116,25 +138,11 @@ footer li, i{
         flex-direction: column;
     }
 
-    .iconMenu {
-        column-gap: 1em;
-    }
-    header {
-        padding: 2vh 0;
-    }
-    header li {
-        padding: 0.8em;
-    }
-
-    header li:hover {
-        background-color: var(--dark-brown);
-    }
-    header a, header i {
+    .dropdownMenu a, .dropdownMenu i {
         color: var(--beige);
     }
 
-
-
+    /* Hamberger Menu */
     .menu-trigger,
     .menu-trigger span {
         display: inline-block;
@@ -153,9 +161,9 @@ footer li, i{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 0.2em;
     background-color: var(--dark-brown);
-    border-radius: 4px;
+    border-radius: 0.4em;
     }
 
     .menu-trigger span:nth-of-type(1) {
@@ -181,55 +189,21 @@ footer li, i{
     .menu-trigger.active-1 span:nth-of-type(3) {
     transform: translateY(-6.5px) rotate(45deg);
     }
-
-   
-
-    footer {
-        padding: 4vh 0;
-        column-gap: 3vh;
-    }
-
-
-    footer >ul {
-        row-gap: 1vh;
-    }
-
-    footer img{
-        width: 3em;
-    }
-  
-
-    footer h2{
-        font-size: 1em;
-        text-decoration: underline;
-    }
-
-    footer li, i{
-        color: var(--gray);
-        font-size: 0.8em;
-    }    
 }
 
+
 @media  screen and (min-width:769px) and (max-width:1023px) {
-    body{
-        row-gap: 6vh;
+    html{
+        font-size: 14px;
     }
 
-    header {
-        padding: 4vh 0;
-        width: 90%;
-    }
-
-    header img,
-    footer img{
-        width: 4em;
-    }
-
+    /* Remove Hampberger menu */
     .menu-trigger{
         display: none;
     }
 
-    nav.dropdownMenu {
+    /* Dropdown CSS */
+    .dropdownMenu {
         display:flex;
         justify-content: space-between;
         width: 80%;
@@ -239,59 +213,27 @@ footer li, i{
     .dropdownMenu .iconMenu {
         display: flex;
         justify-content: center;
-        column-gap: 1.4em;
     }
 
-    .dropdownMenu a {
-        font-size: 2.4em;
-    } 
-
-    .dropdownMenu a:focus{
-        color: var(--orange);
-    }
-
-    .dropdownMenu i{
+    .dropdownMenu a, .dropdownMenu i {
         color: var(--dark-brown);
     }
 
-    footer {
-        padding: 4vh 0;
-        column-gap: 8vh;
-    }
-
-    footer ul {
-        row-gap: 0.5vh;
-    }
-
-    footer h2 {
-        font-size: 1.2em;
-    }
-
-    footer li,
-    footer a{
-        font-size: 1.4em;
-    }
 }
 
 
 @media  screen and (min-width:1024px) {
-    body{
-        row-gap: 6.2vh;
+    html{
+        font-size: 16px;
     }
 
-    header {
-        padding: 4vh 0;
-        width: 80%;
-        justify-content: space-between;
-    }
-    
-    hea
-
+    /* Remove Hampberger menu */
     .menu-trigger{
         display: none;
     }
-
-    nav.dropdownMenu {
+    
+    /* Dropdown CSS */
+    .dropdownMenu {
         display:flex;
         justify-content: space-between;
         width: 90%;
@@ -301,37 +243,15 @@ footer li, i{
     .dropdownMenu .iconMenu {
         display: flex;
         justify-content: center;
-        column-gap: 1.4em;
     }
+    
+    
+    .dropdownMenu a, .dropdownMenu i {
+        color: var(--dark-brown);
+    }    
 
-
-    .dropdownMenu a {
-        font-size: 2.4em;
-    } 
-
-    .dropdownMenu a:focus{
+    .dropdownMenu a:hover{
         color: var(--orange);
     }
 
-    .dropdownMenu i{
-        color: var(--dark-brown);
-    }
-
-    footer {
-        padding: 8vh 0;
-        column-gap: 10%;
-    }
-
-    footer ul {
-        row-gap: 0.5vh;
-    }
-
-    footer h2 {
-        font-size: 1.2em;
-    }
-
-    footer li,
-    footer a{
-        font-size: 1.6em;
-    }
 }

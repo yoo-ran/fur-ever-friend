@@ -1,9 +1,9 @@
 body{
-    min-height: 100vh;
+    padding-top: 10em;
 }
 
-main {
-    flex: 1;
+main{
+    row-gap: 4em;
 }
 
 .fa-chevron-left{
@@ -11,11 +11,16 @@ main {
     color: var(--dark-brown);
     text-align: center;
     font-weight: bold;
+    font-size: 1.5em;
+
 }
 
+/* Top */
 #top {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    row-gap: 0.8em;
 }
 
 #top div{
@@ -29,10 +34,20 @@ main {
     color: var(--dark-brown);
 }
 
-div.search {
+#top h1{
+    font-size: 2.8em;
+}
+
+#top p{
+    font-size: 1.6em;
+}
+
+.search {
     border: 1px solid var(--dark-brown);
     display: flex;
     align-items: center;
+    border-radius: 0.5em;
+    padding: 1em 1.1em;
 }
 
 .search input{
@@ -46,14 +61,20 @@ div.search {
 
 .search input::placeholder, .search i{
     color: var(--dark-brown);
+    font-size: 1.2em;
 }
 
+.filterIcon{
+    width: 2em !important;
+}
+
+/* Categories */
 #categories {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    row-gap: 1vh;
 }
-
-
 
 #categories div{
     display: flex;
@@ -64,6 +85,7 @@ div.search {
 #categories p{
     font-weight: bold;
     color: var(--dark-brown);
+    font-size: 1.2em;
 }
 
 .categoryP {
@@ -76,16 +98,34 @@ div.search {
     color: var(--dark-brown);
     font-weight: bold;
     cursor: pointer;
+    width: 6em;
+    height: 6em;
+    row-gap: 0.5em;
+    border-radius: 0.8em;
 }
 
 .categoryP span{
     color: var(--dark-brown);
+    height: 1em;
+}
+
+.categoryP img{
+    width: 70%;
+    height: 3em;
+    object-fit: contain;
+}
+
+/* Items */
+#items{
+    width: 80%;
 }
 
 #items > div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 2vh;
+    width: 100%;
 }
 
 #card {
@@ -93,6 +133,10 @@ div.search {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40%;
+    padding: 2vh;
+    border-radius: 1em;
+    row-gap: 0.5vh;
 }
 
 #card article {
@@ -102,54 +146,92 @@ div.search {
     align-items: center;
 }
 
+#card img{
+    width: 100%;
+    border-radius: 1em;
+}
+
 #card h3, .fa-mars, .fa-venus {
     color: var(--dark-brown);
     font-family: "Fredoka";
 }
 
+#card h3{
+    font-size: 1.8em;
+
+}
+
 .fa-heart {
     color: var(--blue);
     cursor: pointer;
+    font-size: 1.5em;
 }
 
-#card p , span, .fa-location-dot {
+#card p, .fa-location-dot {
     color: var(--brown);
+    font-size: 1em;
 }
 
+/* Modal */
 .modal div, .modal{
     display: flex;
     flex-direction: column;
     row-gap: 5vh;
 }
 
+#ex1 {
+    width: 60em !important;
+    padding: 2em;
+}
+
+.modal div{
+    margin-bottom: 3vh;
+    width: 100% !;
+    row-gap: 0.5em;
+}
+
 .blocker {
-    background-color: rgba(0, 0, 0, 0.9) !important; 
+    background-color: rgba(0, 0, 0, 1) !important; 
+    padding: 12em 0 !important;
+
 }
 
 .modal h3 {
     color: var(--dark-brown);
     font-family: "Fredoka";
+    font-size: 1.6em;
 }
 
 .modal article{
     display: flex;
     justify-content: space-between;
+    column-gap: 1em;
+
 }
 
 .modal span{
     background-color: var(--brown);
     color: var(--white);
     text-align: center;
+    width: 100%;
+    padding: 1vh;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .modal a {
     border-radius: 2em;
     text-transform: uppercase;
+    padding: 0.5em 1.2em;
+
 }
 
 .modal h2{
     color: var(--dark-brown);
     font-family: "Fredoka";
+    font-size: 2.2em;
+
 }
 
 .closeBtn, .clearBtn {
@@ -162,312 +244,51 @@ div.search {
     color: var(--white);
 }
 
+span.all{
+    width: 100%;
+}
+
 
 
 @media screen and (max-width:796px) {
-    main {
-        row-gap: 4vh;
+    html {
+        font-size: 10px;
     }
 
-    .fa-chevron-left{
-        font-size: 1.5em;
-    }
-
-    .fa-heart {
-        font-size: 1.5em;
-    }
-
-    #top {
-        width: 80%;
-        row-gap: 1vh;
-    }
-
-    #top h1 {
-        font-size: 2.8em;
-    }
-    
-    #top p{
-        font-size: 1.6em;
-    }
-
-    div.search {
-        border-radius: 0.5em;
-        padding: 1vh 1.5vh;
-    }
-
-    .search i{
-        font-size: 1.5em;
-    }
-
-    .filterIcon {
-        width: 2em !important;
-    }
-
-    #categories {
-        width: 80%;
-        row-gap: 1vh;
-    }
-
-    #categories p{
-        font-size: 1.2em;
-    }
-
-    .categoryP {
-        width: 6em;
-        height: 6em;
-        row-gap: 0.5em;
-        border-radius: 0.8em;
-    }
-
-    .categoryP img {
-        width: 3em;
-    }
-
-    #items {
-        width: 80%;
-    }
-
-    #items > div{
-        row-gap: 2vh;
-        width: 100%;
-    }
-
-    #card {
-        width: 40%;
-        padding: 2vh;
-        border-radius: 1em;
-        row-gap: 0.5vh;
-    }
-
-    #card h3 {
-        font-size: 1.8em;
-    }
-
-    #card p , span, .fa-location-dot {
-        font-size: 0.8em;
-    }
-
-    #card img {
-        width: 100%;
-        border-radius: 1em;
-    }
-
-    .modal div{
-        margin-bottom: 3vh;
-        width: 100%;
-    }
-
-
-    .modal a {
-        padding: 0.5em 1.2em;
-    }
-
-    .modal h3 {
-        font-size: 1.6em;
-    }
-
-
-    .modal div {
-        row-gap: 0.5em;
-    }
-
-    .modal article {
-        column-gap: 1em;
-    }
-
-    .modal span {
-        width: 100%;
-        padding: 1vh;
-        border-radius: 0.5em;
-        font-size: 1.2em;
-    }
-
-    span.all {
-        width: 100%;
-    }
-
-    .modal h2{
-        font-size: 2.2em;
-    }
 }
 
 
 @media  screen and (min-width:769px) and (max-width:1023px) {
-    main{
-        row-gap: 6vh;
-    }
-    main section {
-        width: 90%;
+    html{
+        font-size: 16px;
     }
 
     #top{
         align-items: flex-start;
-        row-gap: 1.2vh;
     }
 
     .fa-chevron-left{
         display: none !important;
     }
-
-    #top p{
-        font-size: 2.4em;
-    }
-
-    #top h1 {
-        font-size: 4em;
-    }
-
-    .search {
-        padding: 1vh;
-        width: 30%;
-    }
-
-    .search i {
-        font-size: 1.4em;
-    }
-
-    #categories {
-        row-gap: 2vh;
-    }
-    
-    #categories p{
-        font-size: 2em;
-    }
-
-    .filterIcon {
-        width: 3em;
-    }
-    
-    .categoryP{
-        width: 7em;
-        height: 7em;
-        border-radius: 1.4em;
-    }
-
-    .categoryP span{
-        font-size: 1em;
-
-    }
-
-    .categoryP img {
-        width: 4em;
-    }
-
-    #items > div{
-        row-gap: 2vh;
-    }
-
-    #card {
-        width: 40%;
-        padding: 2vh;
-        border-radius: 1.6em;
-    }
-
-    #card img {
-        width: 90%;
-        margin-bottom: 2vh;
-        border-radius: 1em;
-    }
-    #card h3 {
-        font-size: 2.4em;
-    }
-
-    #card p, 
-    #card span,
-    #card i {
-        font-size: 1.4em;
-    }
-
-    .fa-heart{
-        font-size: 2em !important;
-    }
-
-    #ex1{
-        padding: 4vh ;
-    }
-
-    .modal {
-        width: 100%;
-    }
-  
-    .modal div{
-        margin-bottom: 3vh;
-        width: 100%;
-    }
-
-    .modal h2 {
-        font-size: 3em;
-    }
-
-    .modal h3 {
-        font-size: 2.2em;
-    }
-
-
-    .modal div {
-        row-gap: 0.5em;
-    }
-
-    .modal article {
-        column-gap: 1em;
-    }
-
-    .modal span {
-        width: 100%;
-        padding: 1vh;
-        border-radius: 0.5em;
-        font-size: 1.6em;
-    }
-
-    span.all {
-        width: 100%;
-    }
-
-    .modal a {
-        width: 40%;
-        text-align: center;
-        font-size: 1.6em;
-        padding: 0.8em 0;
-    }
+   
 }
 
 
 @media  screen and (min-width:1024px) {
-    main{
-        row-gap: 6vh;
-    }
-    main section {
-        width: 70%;
+    html{
+        font-size: 16px;
     }
 
     #top{
         align-items: flex-start;
-        row-gap: 1.2vh;
     }
 
     .fa-chevron-left{
         display: none !important;
     }
 
-    #top p{
-        font-size: 2.4em;
-    }
-
-    #top h1 {
-        font-size: 4em;
-    }
-
     .search {
-        padding: 1vh;
         width: 30%;
-    }
-
-    .search i {
-        font-size: 1.4em;
-    }
-
-    #categories {
-        row-gap: 2vh;
     }
 
     #categories div:first-child{
@@ -482,114 +303,12 @@ div.search {
         column-gap: 1vh;
     }
 
-    .filterIcon {
-        width: 3em;
-    }
-    
-    .categoryP{
-        width: 7em;
-        height: 7em;
-        border-radius: 1.4em;
-        row-gap: 0.6em;
-    }
-
+   
     .categoryP:hover {
         background-color: var(--orange);
     }
 
-    .categoryP span{
-        font-size: 1em;
-
-    }
-
-    .categoryP img {
-        width: 4em;
-    }
-
-    #items > div{
-        row-gap: 6vh;
-    }
-
     #card {
         width: 20%;
-        padding: 2vh;
-        border-radius: 1.6em;
-        row-gap: 0.8em;
-    }
-
-    #card img {
-        width: 90%;
-        margin-bottom: 2vh;
-        border-radius: 1em;
-    }
-    #card h3 {
-        font-size: 2.4em;
-    }
-
-    #card p, 
-    #card span,
-    #card i {
-        font-size: 1.4em;
-    }
-
-    .fa-location-dot{
-        font-size: 1em !important;
-        margin-right: 0.4em;
-    }
-
-    .fa-heart{
-        font-size: 2em !important;
-    }
-
-    .fa-mars, .fa-venus {
-        font-size: 1em !important;
-    }
-
-    #ex1{
-        padding: 4vh ;
-    }
-
-    .modal {
-        width: 100%;
-    }
-  
-    .modal div{
-        margin-bottom: 3vh;
-        width: 100%;
-    }
-
-    .modal h2 {
-        font-size: 3em;
-    }
-
-    .modal h3 {
-        font-size: 2.2em;
-    }
-
-
-    .modal div {
-        row-gap: 0.5em;
-    }
-
-    .modal article {
-        column-gap: 1em;
-    }
-
-    .modal span {
-        width: 100%;
-        padding: 1vh;
-        border-radius: 0.5em;
-        font-size: 1.6em;
-    }
-
-    span.all {
-        width: 100%;
-    }
-
-    .modal a {
-        width: 40%;
-        text-align: center;
-        font-size: 1.6em;
-        padding: 0.8em 0;
     }
 }
