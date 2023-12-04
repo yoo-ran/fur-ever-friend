@@ -1,30 +1,50 @@
 .content {
-  width: 90%;
+  width: 100%;
 }
 [class^="number-slide"],
 [class*=" number-slide"] {
   background: grey;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content:flex-end;
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  height: 300px;
+  height: 30em;
   max-height: 100vh;
 }
 
 .keen-slider__slide{
-  height: 10em;
+  width: 100%;
+  height: 12em;
   background-size: cover;
   background-position: center;
   flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.keen-slider__slide::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
 }
 
 .keen-slider__slide strong{
   text-align: left;
+  font-size: 1em;
+  padding-left: 2em;
 }
 
+.keen-slider__slide p{
+  font-size: 0.4em;
+  width: 50%;
+  text-align: left;
+  padding-left: 5em;
+  padding-bottom: 4em;
+}
 
 
 .navigation-wrapper {
@@ -32,9 +52,12 @@
 }
 
 .dots {
+  width: 100%;
   display: flex;
   padding: 10px 0;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .dot {

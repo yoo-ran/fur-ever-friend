@@ -4,7 +4,9 @@ body{
 
 main{
     row-gap: 4em;
+    padding-bottom: 10em;
 }
+
 
 .fa-chevron-left{
     border-radius: 50%;
@@ -295,7 +297,6 @@ span.all{
         flex-direction: column-reverse;
         align-items: flex-start;
         row-gap: 2vh;
-
     }
 
     #categories div:nth-child(2){
