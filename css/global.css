@@ -45,11 +45,11 @@ header {
     align-items: center;
     width: 100%;
     height: 8em;
-    padding: 0 4em;
+    padding: 0 3em;
     position: fixed;
     top:0;
     z-index: 2;
-    background-color: var(--beige);
+    background-color: var(--white);
 }
 
 header img{
@@ -71,7 +71,7 @@ header li {
 }
 
 .dropdownMenu a:focus{
-    color: var(--orange);
+    color: var(--dark-brown);
 }
 
 .iconMenu {
@@ -85,8 +85,8 @@ header li {
 footer {
     background-color: var(--dark-brown);
     justify-content: center;
-    padding: 4em 0;
-    column-gap: 3em;
+    padding: 4em 2em;
+    column-gap: 2em;
 }
 
 footer img{
@@ -102,7 +102,7 @@ footer >ul {
 
 footer li, i{
     color: var(--gray);
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .socialmedia{

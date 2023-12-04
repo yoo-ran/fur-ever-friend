@@ -188,7 +188,7 @@ color: var(--dark-brown) !important;
     justify-content: center;
     position: relative;
     row-gap: 4vh;
- }
+}
 
 .cta::before{
     content: "";
