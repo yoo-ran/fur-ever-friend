@@ -15,19 +15,24 @@
     display: flex;
     flex-direction: column;
   }
+
+  body{
+    padding-top: 5em;
+  }
   
 
 /* banner */
 .banner{
     flex-direction: column;
     align-items: center;
+    row-gap: 0.6em;
 }
 
 .banner article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 0.3em;
+    row-gap: 0.4em;
 }
 
 .banner h1 {
@@ -37,6 +42,15 @@
     font-size: 0.6em;
     line-height: 1.2;
 }
+
+.star{
+    width: 3em;
+    z-index: 1;
+    position: absolute;
+    top:-1em;
+    right: -1.2em
+ }
+
 
 .bannerImg {
     width: 4em;
@@ -48,18 +62,20 @@
     border: none;
     width: 50%;
     padding: 1em;
-    border-radius: 0.4em;
+    border-radius: 0.5em;
 }
 
 .banner p {
     text-align: center;
     color: var(--orange);
     line-height: 1.4;
-    width: 80%;
+    width: 90%;
     font-size: 0.3em;
     text-transform: none;
 }
-
+.banner .st0{
+    fill: var(--orange);
+}
 /* GSAP Slide */
 .slides {
     display: flex;
@@ -116,36 +132,6 @@
     font-weight: 500;
   }
 
-/* Swiper */
-.swiper-slide {
-    background: var(--beige);
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.swiper-slide img {
-object-fit: cover;
-}
-
-.swiper-slide article {
-display: flex;
-justify-content: space-between;
-}
-
-
-.swiper-pagination{
-color: var(--dark-brown) !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev{
-    color: var(--dark-brown) !important;
-}
-
-
 /* Scrolla */
 .scrolla {
     background-color: var(--beige);
@@ -153,12 +139,13 @@ color: var(--dark-brown) !important;
     row-gap: 2em;
     width: 100%;
     padding: 10em 4em;
+    position: relative;
 }
 
 .scrolla h2,
 #swiper h2,
 #swiper h3 {
-    color: var(--beige);
+    color: var(--dark-brown);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
     font-size: 2em;
@@ -166,6 +153,35 @@ color: var(--dark-brown) !important;
 
 .boxes {
     row-gap: 2em;
+}
+
+.footprint{
+    position: absolute;
+    width: 5em;
+}
+
+.footprint .st0{
+    fill: var(--dark-brown);
+}
+
+.footprint:nth-child(1){
+    top: 12em;
+    right: 5em;
+}
+
+.footprint:nth-child(2){
+    top: 20em;
+    right: 10em
+}
+
+.footprint:nth-child(3){
+    bottom: 25em;
+    left: 10em;
+}
+
+.footprint:nth-child(4){
+    bottom: 10em;
+    right: 5em;
 }
 
 /* Call to Action */
@@ -226,6 +242,10 @@ color: var(--dark-brown) !important;
 @media screen and (max-width:768px) {
     html {
         font-size: 10px;
+    }
+
+    .footprint{
+        display: none;
     }
 
 }

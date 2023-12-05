@@ -7,14 +7,12 @@ main{
     padding-bottom: 10em;
 }
 
-
 .fa-chevron-left{
     border-radius: 50%;
     color: var(--dark-brown);
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
-
 }
 
 /* Top */
