@@ -237,6 +237,17 @@
                 </div>
             </section>
 
+            <!-- Drag and Drodown -->
+            <section class='dragBox'>
+              <strong>Discover the boundless joy of adopting a pet <i class="fa-regular fa-face-smile-beam"></i></strong>
+              <p></p>
+              <article>
+                <img class='dragCat' src="./images/logoHeader.png" alt="Cat to drag">
+                <img class='dragHouse' src="./images/logoFooter.png" alt="House">
+              </article>
+            </section>
+
+            <!-- Gsap scrolltrigger -->
             <section class="slides">
               <ul class="list">
             <!-- Call to Action -->
@@ -287,6 +298,9 @@
     <!-- Scrolla -->
     <script src="js/jquery.scrolla.min.js"></script>
     <script src="js/example.min.js"></script>
+
+    <!-- Drag and Dropdown JS -->
+    <script src='./js/jquery.dragon.js'></script>
 
     <!-- Slider JS -->
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
@@ -383,8 +397,8 @@
         const count = gsap.timeline({
             scrollTrigger: {
               trigger: ".counterBox",
-              start: "top-=50% top",
-              end: "+=150%",
+              start: "top-=40% top",
+              end: "+=80%",
               scrub: 1,
               markers: true,
               onEnter: () => counting(),
@@ -392,6 +406,12 @@
               onEnterBack: () => counting(),
               onLeaveBack: () => clear()
             }
+        });
+
+        // Drag DropDown
+        $('.dragCat').dragon({
+          'axis':'x',
+          'within': $('.dragBox article'),
         });
 
     </script>

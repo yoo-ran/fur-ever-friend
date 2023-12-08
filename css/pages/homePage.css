@@ -146,8 +146,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 4em;
-    height: 100vh;
-    /* padding: 8em 0; */
+    height: 80vh;
 }
 .counterBox article{
     display: flex;
@@ -180,14 +179,14 @@
     flex-direction: column;
     row-gap: 2em;
     width: 100%;
-    padding: 10em 4em;
     position: relative;
 }
 
 .scrolla h2,
 #swiper h2,
 #swiper h3,
-.counterBox strong {
+.counterBox strong,
+.dragBox strong {
     color: var(--dark-brown);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
@@ -195,7 +194,6 @@
 }
 
 .boxes {
-    width: 70%;
     row-gap: 2em;
 }
 
@@ -210,25 +208,64 @@
 
 .footprint:nth-child(1){
     top: 1%;
-    right: 5%;
+    right: 8%;
 }
 
 .footprint:nth-child(2){
     top: 20em;
-    right: 5%;
+    right: 8%;
 }
 
 .footprint:nth-child(3){
     bottom: 20%;
-    left: 5%;
+    left: 8%;
 }
 
 .footprint:nth-child(4){
     bottom: 10%;
-    right: 5%;
+    right: 8%;
 }
 
-s
+/* Drag and Dropdown */
+.dragBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 2em;
+    height: 50vh;
+}
+
+.dragBox i {
+    color: var(--dark-brown);
+}
+
+.dragBox article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.dragBox img {
+    width: 4em;
+}
+
+.dragCat{
+    z-index: 1;
+}
+
+.dragHouse{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
 /* Call to Action */
 .callToAction h2, 
 .callToAction p,
@@ -303,8 +340,7 @@ s
     }
 
     .counterBox article{
-        flex-direction: column;
-        row-gap: 8em;
+        column-gap: 8em;
     }
 
 }
@@ -318,6 +354,10 @@ s
 
     .banner{
         flex-direction: row !important;
+    }
+
+    .counterBox article{
+        column-gap: 8em;
     }
 
     .scrolla{
