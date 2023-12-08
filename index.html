@@ -344,12 +344,7 @@
           ease:"elastic"
         });
 
-        // gsap.from(".bannerImg", {x:-900,y:0,duration:3,ease:"power4.inOut"});
-        // gsap.from(".bannerH1", {x:900,y:0,duration:3,ease:"power4.inOut"});
-        // gsap.from(".bannerP", {x:900,y:0,duration:3, delay:0.5,ease:"power4.inOut"});
-        // gsap.from(".bannerBtn", {x:900,y:0,duration:3, delay:1,ease:"power4.inOut"});
-
-
+        //  
         const item = gsap.timeline({
             scrollTrigger: {
               trigger: ".banner",
@@ -367,48 +362,35 @@
         // GSAP Animation in Scrolla 
         gsap.to(".footprint",{scale:1.2, yoyo:true, repeat:-1, ease:"bounce", duration:1})
 
+        // Count start
         const counting = () => {
-          $('#adoption').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
+          // counto Plugin to count number
+          $('#adoption').counto(1100, 2000);
+          $('#rescue').counto(2048, 2000);
+          $('#client').counto(950, 2000);
+          $('#services').counto(410, 2000);
+        }
 
-  {
-
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
-
-  });  
-  
-  
-
-});
-          // $('#adoption').counto(1100, 3000);
-          // $('#rescue').counto(2048, 3000);
-          // $('#client').counto(950, 3000);
-          // $('#services').counto(410, 3000);
+        // Sanitize number in Counter box to restart
+        const clear = () => {
+          $("#adoption").text("0")
+          $("#rescue").text("0")
+          $("#client").text("0")
+          $("#services").text("0")
         }
 
         // Counter scroll
         const count = gsap.timeline({
             scrollTrigger: {
               trigger: ".counterBox",
-              start: "top top",
-              end: "+=100",
-              // scrub: 1,
-              pin: true,
+              start: "top-=50% top",
+              end: "+=150%",
+              scrub: 1,
               markers: true,
-              onToggle: () => counting()
+              onEnter: () => counting(),
+              onLeave: () => clear(),
+              onEnterBack: () => counting(),
+              onLeaveBack: () => clear()
             }
         });
 

@@ -143,8 +143,11 @@
 .counterBox{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     row-gap: 4em;
+    height: 100vh;
+    /* padding: 8em 0; */
 }
 .counterBox article{
     display: flex;
@@ -297,6 +300,11 @@ s
 @media screen and (min-width:769px)and (max-width: 1023px) {
     html{
         font-size: 14px;
+    }
+
+    .counterBox article{
+        flex-direction: column;
+        row-gap: 8em;
     }
 
 }
