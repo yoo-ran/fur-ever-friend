@@ -1,7 +1,5 @@
 
 .keen-slide{
-  background-color: var(--blue);
-  padding: 7em 0;
   width: 100%;
 }
 
@@ -18,8 +16,12 @@
   max-height: 100vh;
 }
 
+#my-keen-slider{
+  height: 70vh;
+}
+
 .keen-slider__slide{
-  height: 18em;
+  height: 100%;
   background-size: cover;
   background-position: center;
   flex-direction: column;

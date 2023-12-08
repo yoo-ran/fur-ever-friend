@@ -14,8 +14,9 @@
   main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    row-gap: 5em;
   }
-
   body{
     padding-top: 5em;
   }
@@ -24,22 +25,26 @@
 /* banner */
 .banner{
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     row-gap: 0.6em;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .banner article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 0.4em;
+    row-gap: 1em;
 }
 
 .banner h1 {
     font-family: 'Fredoka', sans-serif;
     color: var(--dark-brown);
     text-align: center;
-    font-size: 0.6em;
+    font-size: 4em;
     line-height: 1.2;
 }
 
@@ -53,7 +58,7 @@
 
 
 .bannerImg {
-    width: 4em;
+    width: 20em;
 }
 
 .banner button{
@@ -70,12 +75,14 @@
     color: var(--orange);
     line-height: 1.4;
     width: 90%;
-    font-size: 0.3em;
+    font-size: 1.2em;
     text-transform: none;
 }
+
 .banner .st0{
     fill: var(--orange);
 }
+
 /* GSAP Slide */
 .slides {
     display: flex;
@@ -132,6 +139,38 @@
     font-weight: 500;
   }
 
+/* Counter */
+.counterBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4em;
+}
+.counterBox article{
+    display: flex;
+    align-items: center;
+}
+
+.counterBox div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.counterBox i {
+    font-size: 1.4em;
+    color: var(--orange);
+    row-gap: 0.5em;
+}
+
+.counterBox p {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--dark-brown);
+}
+
 /* Scrolla */
 .scrolla {
     background-color: var(--beige);
@@ -144,7 +183,8 @@
 
 .scrolla h2,
 #swiper h2,
-#swiper h3 {
+#swiper h3,
+.counterBox strong {
     color: var(--dark-brown);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
@@ -152,12 +192,13 @@
 }
 
 .boxes {
+    width: 70%;
     row-gap: 2em;
 }
 
 .footprint{
     position: absolute;
-    width: 5em;
+    width: 4em;
 }
 
 .footprint .st0{
@@ -165,27 +206,27 @@
 }
 
 .footprint:nth-child(1){
-    top: 12em;
-    right: 5em;
+    top: 1%;
+    right: 5%;
 }
 
 .footprint:nth-child(2){
     top: 20em;
-    right: 10em
+    right: 5%;
 }
 
 .footprint:nth-child(3){
-    bottom: 25em;
-    left: 10em;
+    bottom: 20%;
+    left: 5%;
 }
 
 .footprint:nth-child(4){
-    bottom: 10em;
-    right: 5em;
+    bottom: 10%;
+    right: 5%;
 }
 
+s
 /* Call to Action */
-
 .callToAction h2, 
 .callToAction p,
 .callToAction a {
@@ -199,6 +240,7 @@
     justify-content: center;
     position: relative;
     row-gap: 4vh;
+    height: 80vh;
 }
 
 .cta::before{
@@ -243,9 +285,10 @@
     html {
         font-size: 10px;
     }
-
-    .footprint{
-        display: none;
+    
+    .counterBox article{
+        flex-direction: column;
+        row-gap: 8em;
     }
 
 }
@@ -261,13 +304,12 @@
 /* Desktop */
 @media screen and (min-width:1024px) {
     html{
-        font-size: 16px;
+        font-size: 18px;
     }
 
 
     .banner{
         flex-direction: row !important;
-        max-width:50em !important;
     }
 
     .scrolla{
