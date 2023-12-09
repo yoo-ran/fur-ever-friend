@@ -13,9 +13,10 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
-  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
     <link rel="stylesheet" href="./css/slide.css">
+    <!-- Mouse Cursor -->
+    <link rel="stylesheet" href="/css/mouse.cursor.css">
     <!-- Scrolla Plugin -->
     <link href="css/scrollBox.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet">
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+  <a href="#"><div id='toTop' data-flag="bottom"><i class="fa-solid fa-chevron-down"></i>Bottom</div></a>
 
     <header>
       <h1><a href="./index.html"><img src="/images/logoHeader.png" alt=""></a></h1>
@@ -82,7 +84,7 @@
                           <br>Our pet adoption app connects you to loving pets waiting for a home.
                           <br>Swipe, Meet, and Change a life today
                       </p>
-                      <button class='bannerBtn'>START NOW!</button>
+                      <button class='bannerBtn'><a href="./pet.html">START NOW!</a></button>
                   </article>
               </section>
 
@@ -240,10 +242,11 @@
             <!-- Drag and Drodown -->
             <section class='dragBox'>
               <strong>Discover the boundless joy of adopting a pet <i class="fa-regular fa-face-smile-beam"></i></strong>
-              <p></p>
+              <p>Drag the cute cat to your home <i class="fa-solid fa-heart"></i> </p>
               <article>
-                <img class='dragCat' src="./images/logoHeader.png" alt="Cat to drag">
-                <img class='dragHouse' src="./images/logoFooter.png" alt="House">
+                <img class='dragCat' ondrag='drop(event)' src="./images/drag/cat.png" alt="Cat to drag">
+                <img class='dragHouse' src="./images/drag/house.png" alt="House">
+                <img class='heart' src="./images/drag/heart.png" alt="Heart">
               </article>
             </section>
 
@@ -287,6 +290,7 @@
             </ul>
         </ul>
     </footer>
+
 
 
     <!-- Jquery -->
@@ -400,7 +404,6 @@
               start: "top-=40% top",
               end: "+=80%",
               scrub: 1,
-              markers: true,
               onEnter: () => counting(),
               onLeave: () => clear(),
               onEnterBack: () => counting(),
@@ -414,8 +417,55 @@
           'within': $('.dragBox article'),
         });
 
+        console.log($(".dragCat").position())
+        console.log($(".dragHouse").position().left)
+        var heartAnimate = gsap.to(".heart", {
+                        scale:1.5,
+                        repeat:-1,
+                        yoyo:true,
+                        ease:"bounce",
+                        duration:2
+        })
+         
+        // Add Animation and functioanlity to drag plug in
+        const drop = (e) => {
+
+          const cat = $(".dragCat");
+          const house = $(".dragHouse")
+          const houseX = house.position().left
+          const heart = $(".heart")
+          cat.css("cursor","none")
+          if(cat.position().left == houseX){
+            cat.attr("src","/images/drag/happyCat.png")
+            house.css("opacity","0")
+            heart.css("opacity","1")
+            heartAnimate.play()
+          }else{
+            cat.attr("src","/images/drag/cat.png")
+            house.css("opacity","1")
+            heart.css("opacity","0")
+            heartAnimate.pause()
+          }
+
+        }
+
+        const scrollTop =()=>{
+          console.log($("#toTop").data());
+          if($("#toTop").data()=="bottom"){
+             
+            
+          }else{
+            $("html","body").animate({
+                     scrollTop: '0px',
+                     duration:2
+            },1400)
+          }
+        }
+
+          $("#toTop").on("click",scrollTop)
+
     </script>
-    
+    <script src='/js/mouseCursor.js'></script>
 
 
     <!-- Global JS -->

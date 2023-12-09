@@ -20,6 +20,14 @@
   body{
     padding-top: 5em;
   }
+
+  /* Custom Cursor */
+
+  body{
+    cursor: none;
+  }
+
+
   
 
 /* banner */
@@ -63,11 +71,18 @@
 
 .banner button{
     background-color: var(--blue);
-    color: var(--white);
     border: none;
     width: 50%;
     padding: 1em;
     border-radius: 0.5em;
+}
+.banner button:hover,
+.callToAction a:hover {
+    background-color: var(--orange);
+}
+
+.banner a {
+    color: var(--white);
 }
 
 .banner p {
@@ -233,7 +248,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    row-gap: 2em;
+    row-gap: 3em;
     height: 50vh;
 }
 
@@ -241,27 +256,38 @@
     color: var(--dark-brown);
 }
 
+.dragBox p,
+.dragBox p i {
+    color: var(--orange);
+    font-size: 1.2em;
+}
+
 .dragBox article{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    background-color: var(--blue);
+    height: 1em;
+    border-radius: 1em;
+    background-color: var(--blue) !important;
     position: relative;
 }
 
 .dragBox img {
-    width: 4em;
+    width: 5em;
 }
 
 .dragCat{
     z-index: 1;
 }
 
-.dragHouse{
+.dragHouse, .heart{
     position: absolute;
-    top: 0;
     right: 0;
+}
+
+.heart {
+    opacity: 0;
 }
 
 

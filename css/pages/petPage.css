@@ -109,6 +109,10 @@ main{
     border-radius: 0.8em;
 }
 
+.categoryP:active {
+    background-color: var(--orange);
+}
+
 
 .categoryP span{
     color: var(--dark-brown);
