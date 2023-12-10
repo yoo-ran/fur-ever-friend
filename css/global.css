@@ -27,8 +27,8 @@ a {
 #toTop{
     position: absolute;
     position: fixed;
-    bottom: 1em;
-    right: 4em;
+    bottom: 3em;
+    right: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,8 @@ a {
     border-radius: 50%;
     border: 1px solid var(--brown);
     z-index: 10;
-
+    opacity: 0;
+    background-color: red;
 }
 
 #toTop i,

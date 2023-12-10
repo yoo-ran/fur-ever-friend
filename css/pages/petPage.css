@@ -83,8 +83,9 @@ main{
 
 #categories div{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    column-gap: 1em;
 }
 
 #categories p{
@@ -103,8 +104,9 @@ main{
     color: var(--dark-brown);
     font-weight: bold;
     cursor: pointer;
-    width: 6em;
-    height: 6em;
+    width: 4em;
+    height: 4em;
+    padding: 0.5em;
     row-gap: 0.5em;
     border-radius: 0.8em;
 }
@@ -127,13 +129,15 @@ main{
 
 /* Items */
 #items{
-    width: 80%;
+    width:100%;
+    border: 1px solid red;
 }
 
 #items > div{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 2vh;
     row-gap: 2vh;
     width: 100%;
 }

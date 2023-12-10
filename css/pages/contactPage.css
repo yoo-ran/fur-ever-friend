@@ -160,6 +160,7 @@ ul{
 
     .formInfo{
         flex-direction: row;
+        justify-content: space-between;
     }
 
     #information{

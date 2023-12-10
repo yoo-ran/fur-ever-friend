@@ -192,9 +192,12 @@
 .scrolla {
     background-color: var(--beige);
     flex-direction: column;
+    justify-content: center;
     row-gap: 2em;
     width: 100%;
     position: relative;
+    /* height: 100vh; */
+    padding: 4em 0;
 }
 
 .scrolla h2,
@@ -210,6 +213,7 @@
 
 .boxes {
     row-gap: 2em;
+    padding: 0 8em;
 }
 
 .footprint{
@@ -217,18 +221,16 @@
     width: 4em;
 }
 
-.footprint .st0{
-    fill: var(--dark-brown);
-}
-
 .footprint:nth-child(1){
-    top: 1%;
-    right: 8%;
+    top: 100%;
+    right: 4%;
+    fill: red;
 }
 
 .footprint:nth-child(2){
     top: 20em;
     right: 8%;
+    fill: red;
 }
 
 .footprint:nth-child(3){
@@ -238,7 +240,7 @@
 
 .footprint:nth-child(4){
     bottom: 10%;
-    right: 8%;
+    right: 4%;
 }
 
 /* Drag and Dropdown */
@@ -250,6 +252,10 @@
     width: 100%;
     row-gap: 3em;
     height: 50vh;
+}
+
+.dragBox strong{
+    width: 80%;
 }
 
 .dragBox i {
@@ -384,10 +390,6 @@
 
     .counterBox article{
         column-gap: 8em;
-    }
-
-    .scrolla{
-        padding: 10em 25em;
     }
 
   
