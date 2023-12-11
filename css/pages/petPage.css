@@ -129,8 +129,7 @@ main{
 
 /* Items */
 #items{
-    width:100%;
-    border: 1px solid red;
+    width:80%;
 }
 
 #items > div{
@@ -151,6 +150,7 @@ main{
     padding: 2vh;
     border-radius: 1em;
     row-gap: 0.5vh;
+    box-shadow: 0.1em 0.1em 0.2em var(--gray);
 }
 
 #card article {
