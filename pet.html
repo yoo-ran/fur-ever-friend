@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content=""><meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="./css/global.css">
-    <!-- Pet page CSS -->
-    <link rel="stylesheet" href="./css/pages/petPage.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Modal CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <title>Fur-Ever Friend</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content=""><meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="./css/global.css">
+        <!-- Pet page CSS -->
+        <link rel="stylesheet" href="./css/pages/petPage.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Mouse Cursor CSS -->
+        <link rel="stylesheet" href="/css/plugins/mouse.cursor.css">
+        <!-- Modal CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+        <title>Fur-Ever Friend</title>
+    </head>
     <body>
+        <!-- Go to top Button -->
+        <a href="#" id='toTop'><i class="fa-solid fa-chevron-up"></i>Top</a>
+
+        <!-- Header -->
         <header>
-            <h1><a href="./index.html"><img src="/images/logoHeader.png" alt="Header Logo"></a></h1>
+            <h1><a href="./index.html"><img src="/images/logoHeader.png" alt="Header Logo image"></a></h1>
             <nav class='dropdownMenu'>
                 <ul class='menu'>
                     <li><a href="index.html">Home</a></li>
@@ -36,8 +43,9 @@
                 <span></span>
             </a>
         </header>
+
+        <!-- Main -->
         <main>
-            <div class=''></div>
             <!-- Modal -->
             <section id="ex1" class="modal">
                 <div>
@@ -125,17 +133,17 @@
                     <a href="#ex1" rel="modal:open" class='filterIcon'><img src="./images/categories/filter.png" alt="Filter Icon" class='filterIcon'></a>
                 </div>
                 <div>
-                    <a href='#' class='categoryP' data-filter="" data-click="true">All</a>
-                    <a href='#' class='categoryP' data-filter="cat" data-click="false"><img src="./images/categories/cat.png" alt="Cat Category"><span>Cat</span></a>
-                    <a href='#' class='categoryP' data-filter="dog" data-click="false"><img src="./images/categories/dog.png" alt="Dog Category"><span>Dog</span></a>
-                    <a href='#' class='categoryP' data-filter="fish" data-click="false"><img src="./images/categories/fish.png" alt="Fish Category"><span>Fish</span></a>
-                    <a href='#' class='categoryP' data-filter="bird" data-click="false"><img src="./images/categories/bird.png" alt="Bird Category"><span>Bird</span></a>
+                    <p href='#' class='categoryP' data-filter="" data-click="true">All</p>
+                    <p href='#' class='categoryP' data-filter="cat" data-click="false"><img src="./images/categories/cat.png" alt="Cat Category"><span>Cat</span></p>
+                    <p href='#' class='categoryP' data-filter="dog" data-click="false"><img src="./images/categories/dog.png" alt="Dog Category"><span>Dog</span></p>
+                    <p href='#' class='categoryP' data-filter="fish" data-click="false"><img src="./images/categories/fish.png" alt="Fish Category"><span>Fish</span></p>
+                    <p href='#' class='categoryP' data-filter="bird" data-click="false"><img src="./images/categories/bird.png" alt="Bird Category"><span>Bird</span></p>
                 </div>
             </section>
             <section id='items'>
                 <div>
                     <div data-tags="dog,male,seven,1" class="show" id='card'>
-                        <img src="./images/slides/pet08.jpg" alt="Dexter" >
+                        <img src="./images/slides/pet08.jpg" alt="Dexter Profile Photo" >
                         <article>
                             <h3>Dexter<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-solid fa-heart"></i>
@@ -150,7 +158,7 @@
                         </article>
                     </div>
                     <div data-tags="cat,female,three,5" class="show" id='card'>
-                        <img src="./images/slides/pet16.jpg" alt="Dexter" >
+                        <img src="./images/slides/pet16.jpg" alt="Dexter Profile Photo" >
                         <article>
                             <h3>Lulu<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-solid fa-heart"></i>
@@ -165,7 +173,7 @@
                         </article>
                     </div>
                     <div data-tags="dog,male,three,0.5" class="show" id='card'>
-                        <img src="./images/slides/pet10.jpg" alt="Mark" >
+                        <img src="./images/slides/pet10.jpg" alt="Mark Profile Photo" >
                         <article>
                             <h3>Mark<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -180,7 +188,7 @@
                         </article>
                     </div>
                     <div data-tags="bird,female,one,0.5" class="show" id='card'>
-                        <img src="./images/slides/pet03.jpg" alt="Carina" >
+                        <img src="./images/slides/pet03.jpg" alt="Carina Profile Photo" >
                         <article>
                             <h3>Carina<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -195,7 +203,7 @@
                         </article>
                     </div>
                     <div data-tags="rodent,female,one,0.1" class="show" id='card'>
-                        <img src="./images/slides/pet01.jpg" alt="Milo" >
+                        <img src="./images/slides/pet01.jpg" alt="Milo Profile Photo" >
                         <article>
                             <h3>Milo<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -210,7 +218,7 @@
                         </article>
                     </div>
                     <div data-tags="fish,male,one,0.5" class="show" id='card'>
-                        <img src="./images/slides/fish.jpg" alt="Nemo" >
+                        <img src="./images/slides/fish.jpg" alt="Nemo Profile Photo" >
                         <article>
                             <h3>Nemo<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -225,7 +233,7 @@
                         </article>
                     </div>
                     <div data-tags="cat,female,one,0.5" class="show" id='card'>
-                        <img src="./images/slides/pet13.jpg" alt="Nemo" >
+                        <img src="./images/slides/pet13.jpg" alt="Navi Profile Photo" >
                         <article>
                             <h3>Navi<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -240,7 +248,7 @@
                         </article>
                     </div>
                     <div data-tags="cat,female,one,0.5" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/179237/pexels-photo-179237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Kiki" >
+                        <img src="https://images.pexels.com/photos/179237/pexels-photo-179237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Kiki Profile Photo" >
                         <article>
                             <h3>Kiki<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -255,7 +263,7 @@
                         </article>
                     </div>
                     <div data-tags="rodent,male,one,5" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/15373305/pexels-photo-15373305/free-photo-of-hamster-in-mug-eating-chocolate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/15373305/pexels-photo-15373305/free-photo-of-hamster-in-mug-eating-chocolate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Haul Profile Photo" >
                         <article>
                             <h3>Haul<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -270,7 +278,7 @@
                         </article>
                     </div>
                     <div data-tags="bird,male,five,7" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/17914581/pexels-photo-17914581/free-photo-of-close-up-of-european-robin.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/17914581/pexels-photo-17914581/free-photo-of-close-up-of-european-robin.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Biri Profile Photo" >
                         <article>
                             <h3>Biri<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -285,7 +293,7 @@
                         </article>
                     </div>
                     <div data-tags="bird,male,three,0.5" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/10502515/pexels-photo-10502515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/10502515/pexels-photo-10502515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Crown Profile Photo" >
                         <article>
                             <h3>Crown<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -300,7 +308,7 @@
                         </article>
                     </div>
                     <div data-tags="fish,female,one,0.5" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/18435512/pexels-photo-18435512/free-photo-of-a-group-of-small-fish-swimming-in-a-tank.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/18435512/pexels-photo-18435512/free-photo-of-a-group-of-small-fish-swimming-in-a-tank.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Angel Profile Photo" >
                         <article>
                             <h3>Angel<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -315,7 +323,7 @@
                         </article>
                     </div>
                     <div data-tags="dog,female,seven,7+" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/994174/pexels-photo-994174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/994174/pexels-photo-994174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Kogi Profile Photo" >
                         <article>
                             <h3>Kogi<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -330,7 +338,7 @@
                         </article>
                     </div>
                     <div data-tags="dog,male,nine,5" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="FuFu Profile Photo" >
                         <article>
                             <h3>Fufu<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -345,7 +353,7 @@
                         </article>
                     </div>
                     <div data-tags="dog,female,one,1" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/17024399/pexels-photo-17024399/free-photo-of-a-dog-with-a-bunch-of-sticks-in-its-mouth-running-on-a-grass-field.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/17024399/pexels-photo-17024399/free-photo-of-a-dog-with-a-bunch-of-sticks-in-its-mouth-running-on-a-grass-field.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Larry Profile Photo" >
                         <article>
                             <h3>Larry<i class="fa-solid fa-venus"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -360,7 +368,7 @@
                         </article>
                     </div>
                     <div data-tags="dog,male,three,1" class="show" id='card'>
-                        <img src="https://images.pexels.com/photos/13073385/pexels-photo-13073385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hami" >
+                        <img src="https://images.pexels.com/photos/13073385/pexels-photo-13073385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Doodle Profile Photo" >
                         <article>
                             <h3>Doodle<i class="fa-solid fa-mars"></i></h3>
                             <i class="fa-regular fa-heart"></i>
@@ -376,10 +384,9 @@
                     </div>
                 </div>
             </section>
-
         </main>
         <footer>
-            <h1><img src="/images/logoFooter.png" alt=""></h1>
+            <h1><img src="/images/logoFooter.png" alt="Footer Logo Image"></h1>
             <ul>
                 <li><h2>Address</h2></li>
                 <li>555 Seymout St, BC</li>
@@ -398,40 +405,26 @@
                     <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </ul>
-            
         </footer>
 
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- Global js -->
-        <script src='./js/global.js'></script>
-
         <!-- Filter JS -->
-        <script src='./js/autofilter.js'></script>
+        <script src='./js/plugins/autofilter.js'></script>
 
         <!-- Modal CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <script>
-            $(".modal span").mousedown(function(){
-                if(this.style.backgroundColor=="var(--dark-brown)"){
-                    this.style.backgroundColor = "var(--brown)";
-                }else{
-                    this.style.backgroundColor = "var(--dark-brown)";
-                }
-            })
-            $(".clearBtn").click(function(){
-                $(".modal span").css("background-color","var(--brown)");
-            })
-            $(".fa-heart").click(function(){
-                if(this.className == "fa-solid fa-heart"){
-                    this.className = "fa-regular fa-heart"
-                }else{
-                    this.className = "fa-solid fa-heart"
-                }
-            })
 
+        <!-- Mouse cursor Plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+        <script src='/js/plugins/mouseCursor.js'></script>
+        
+        <!-- Pet page JS -->
+        <script src='./js/pages/pet.js'></script>
 
-        </script>
+        <!-- Global js -->
+        <script src='./js/global.js'></script>
     </body>
 </html>

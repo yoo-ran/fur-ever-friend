@@ -1,34 +1,11 @@
 
-
-
-/* Scroll GSAP */
-* {
-    box-sizing: border-box;
-    padding: 0;
-  }
-
-  body, html {
-    margin: 0;
-  }
- 
   main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     row-gap: 5em;
   }
-  body{
-    padding-top: 5em;
-  }
-
-  /* Custom Cursor */
 
   body{
     cursor: none;
   }
-
-
-  
 
 /* banner */
 .banner{
@@ -219,26 +196,25 @@
 .footprint{
     position: absolute;
     width: 4em;
-}
-
-.footprint:nth-child(1){
-    top: 100%;
-    right: 4%;
-    fill: red;
+    fill: var(--dark-brown);
 }
 
 .footprint:nth-child(2){
-    top: 20em;
-    right: 8%;
-    fill: red;
+    top: 3rem;
+    left: 4%;
 }
 
 .footprint:nth-child(3){
-    bottom: 20%;
-    left: 8%;
+    top: 20em;
+    right: 4%;
 }
 
 .footprint:nth-child(4){
+    bottom: 20%;
+    left: 4%;
+}
+
+.footprint:nth-child(5){
     bottom: 10%;
     right: 4%;
 }

@@ -10,252 +10,217 @@
         <link rel="stylesheet" href="./css/global.css">
         <!-- Contact page CSS -->
         <link rel="stylesheet" href="./css/pages/contactPage.css">
+        <!-- Mouse Cursor CSS -->
+        <link rel="stylesheet" href="/css/plugins/mouse.cursor.css">
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
         <title>Fur-Ever Friend</title>
     </head>
     <body>
+      <!-- Go to top Button -->
+      <a href="#" id='toTop'><i class="fa-solid fa-chevron-up"></i>Top</a>
+      <!-- Header -->
+      <header>
+        <h1><a href="./index.html"><img src="/images/logoHeader.png" alt="Header Logo Image"></a></h1>
+        <nav class='dropdownMenu'>
+            <ul class='menu'>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pet.html">Pets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class='iconMenu'>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+        <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+      </header>
+
       <!-- Main -->
-        <header>
-          <h1><a href="./index.html"><img src="/images/logoHeader.png" alt=""></a></h1>
-          <nav class='dropdownMenu'>
-              <ul class='menu'>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="pet.html">Pets</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-              <ul class='iconMenu'>
-                  <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                  <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-              </ul>
-          </nav>
-          <a class="menu-trigger" href="#">
-              <span></span>
-              <span></span>
-              <span></span>
-          </a>
-        </header>
+      <main>
+        <h1>Get in Touch <i class="fa-solid fa-paw"></i></h1>
 
-        <!-- Main -->
-        <main>
-            <h1>Get in Touch <i class="fa-solid fa-paw"></i></h1>
-            <section class='formInfo'>
-                <article class='form'>
-                    <h3>Send a Message </h3>
-                    <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-6">
-                          <label for="validationCustom01" class="form-label">First name</label>
-                          <input type="text" class="form-control" id="validationCustom01" required>
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
+        <section class='formInfo'>
+              <!-- Form -->
+              <article class='form'>
+                  <h3>Send a Message </h3>
+                  <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" required>
+                        <div class="valid-feedback">
+                          Looks good!
                         </div>
-                        <div class="col-md-6">
-                          <label for="validationCustom02" class="form-label">Last name</label>
-                          <input type="text" class="form-control" id="validationCustom02" required>
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">
+                          Looks good!
                         </div>
-                        <div class="col-md-12">
-                          <label for="validationCustom03" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="validationCustom03" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="validationCustom03" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Email Address.
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="validationCustom05" class="form-label">Message</label>
+                        <textarea type="text" class="form-control" id="validationCustom05" placeholder='Leave the message' required></textarea>
+                        <div class="invalid-feedback">
+                          Please provide information.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
                           <div class="invalid-feedback">
-                            Please provide a valid Email Address.
+                            You must agree before submitting.
                           </div>
                         </div>
-                        <div class="col-md-12">
-                          <label for="validationCustom05" class="form-label">Message</label>
-                          <textarea type="text" class="form-control" id="validationCustom05" placeholder='Leave the message' required></textarea>
-                          <div class="invalid-feedback">
-                            Please provide information.
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                              Agree to terms and conditions
-                            </label>
-                            <div class="invalid-feedback">
-                              You must agree before submitting.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <button class="btn btn-primary" type="submit">Submit form</button>
-                        </div>
-                      </form>
-                </article>
-                <article id='information'>
-                    <div class='infoBox'>
-                        <div>
-                            <h3>Call Us</h3>
-                            <p><i class="fa-solid fa-phone"></i> 123-456-7890</p>
-                        </div>
-                        <div>
-                            <h3>Email Us</h3>
-                            <p><i class="fa-solid fa-envelope"></i> info@furever.com</p>
-                        </div>
-                        <div>
-                            <h3>Visit Us</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 555 Seymour St</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Operation Hours</h3>
-                        <p>Mon 9:00 - 05:00</p>
-                        <p>Tue 9:00 - 05:00</p>
-                        <p>Wed 9:00 - 05:00</p>
-                        <p>Thu 9:00 - 05:00</p>
-                        <p>Fri 9:00 - 05:00</p>
-                        <p>Sat 9:00 - 02:00</p>
-                        <p>Sun 9:00 - 02:00</p>
-                    </div>
-                </article>
-            </section>
-
-            <!-- Map -->
-            <section id='map'>
-              <div class="map"></div>
-            </section>
-
-            <!-- FAQs -->
-            <section id='faqs'>
-                <h3>FAQs</h3>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Q1: How does the pet adoption process work?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            A: To adopt a pet, follow these steps:
-
-                            Browse our available pets online.
-                            Fill out an adoption application.
-                            Our team will review your application.
-                            If approved, schedule a meeting with the pet.
-                            If everything goes well, complete the adoption process.
-                        </div>
                       </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Q2: Is there an adoption fee?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            A: Yes, there is an adoption fee to cover vaccinations, spaying/neutering, and other medical expenses. The fee may vary based on the pet's age, breed, and medical history.
-                        </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
                       </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Q3: Are there any specific adoption requirements?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            A: We assess each application individually. While requirements may vary, we generally look for responsible pet owners who can provide a loving and stable home.
-                        </div>
+                  </form>
+              </article>
+
+              <!-- Company Information -->
+              <article id='information'>
+                  <div class='infoBox'>
+                      <div>
+                          <h3>Call Us</h3>
+                          <p><i class="fa-solid fa-phone"></i> 123-456-7890</p>
                       </div>
-                    </div>
+                      <div>
+                          <h3>Email Us</h3>
+                          <p><i class="fa-solid fa-envelope"></i> info@furever.com</p>
+                      </div>
+                      <div>
+                          <h3>Visit Us</h3>
+                          <p><i class="fa-solid fa-location-dot"></i> 555 Seymour St</p>
+                      </div>
                   </div>
-            </section>
-            
-            
+                  <div>
+                      <h3>Operation Hours</h3>
+                      <p>Mon 9:00 - 05:00</p>
+                      <p>Tue 9:00 - 05:00</p>
+                      <p>Wed 9:00 - 05:00</p>
+                      <p>Thu 9:00 - 05:00</p>
+                      <p>Fri 9:00 - 05:00</p>
+                      <p>Sat 9:00 - 02:00</p>
+                      <p>Sun 9:00 - 02:00</p>
+                  </div>
+              </article>
+          </section>
 
+          <!-- Map -->
+          <section id='map'>
+            <div class="map"></div>
+          </section>
 
-        </main>
-        <footer>
-            <h1><img src="/images/logoFooter.png" alt=""></h1>
-            <ul>
-                <li><h2>Address</h2></li>
-                <li>555 Seymout St, BC</li>
-                <li>Vancouver, Canada</li>
-            </ul>
-            <ul>
-                <li><h2>Contact</h2></li>
-                <li><i class="fa-solid fa-phone"></i> 123-456-7890</li>
-                <li><i class="fa-solid fa-envelope"></i> info@furever.com</li>
-            </ul>
-            <ul>
-                <li><h2>Social Media</h2></li>
-                <ul class='socialmedia'>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </ul>
-            
-        </footer>
+          <!-- FAQs -->
+          <section id='faqs'>
+            <h3>FAQs</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Q1: How does the pet adoption process work?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      A: To adopt a pet, follow these steps:
+
+                      Browse our available pets online.
+                      Fill out an adoption application.
+                      Our team will review your application.
+                      If approved, schedule a meeting with the pet.
+                      If everything goes well, complete the adoption process.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Q2: Is there an adoption fee?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      A: Yes, there is an adoption fee to cover vaccinations, spaying/neutering, and other medical expenses. The fee may vary based on the pet's age, breed, and medical history.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Q3: Are there any specific adoption requirements?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      A: We assess each application individually. While requirements may vary, we generally look for responsible pet owners who can provide a loving and stable home.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+      </main>
+      
+      <!-- Footer -->
+      <footer>
+          <h1><img src="/images/logoFooter.png" alt="Footer Logo Image"></h1>
+          <ul>
+              <li><h2>Address</h2></li>
+              <li>555 Seymout St, BC</li>
+              <li>Vancouver, Canada</li>
+          </ul>
+          <ul>
+              <li><h2>Contact</h2></li>
+              <li><i class="fa-solid fa-phone"></i> 123-456-7890</li>
+              <li><i class="fa-solid fa-envelope"></i> info@furever.com</li>
+          </ul>
+          <ul>
+              <li><h2>Social Media</h2></li>
+              <ul class='socialmedia'>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+              </ul>
+          </ul>
+      </footer>
 
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <!-- Map JS -->
-        <script src='./js/google-maps.min.js'></script>
+        <script src='./js/plugins/google-maps.min.js'></script>
 
-       <!-- Bootstrap JS -->
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-       </script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-
-       <!-- Bootstrap Form Starter -->
-       <script>
-       // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (() => {
-                'use strict'
-
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                const forms = document.querySelectorAll('.needs-validation')
-
-                // Loop over them and prevent submission
-                Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-                })
-            })()
-        </script>
-
-
-        <script type="text/javascript">
-          $('.map').googleMaps({
-            key: 'AIzaSyALiMLroVOKY1rfeN9oanTWGif4dNQ6Hw8',
-
-            points: [{
-
-              // New York
-              lat: 49.283569,
-              lng: -123.115021,
-              marker: true,
-              title: 'Marker title',
-              infoWindow: 'Info window content'
-              // marker: 'custom.png'
-              
-            }],
-            type:'hybrid',
-            zoom: 15,
-            responsive:true
-          });
-
-        </script>
+        <!-- Mouse cursor Plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script src='/js/plugins/mouseCursor.js'></script>
+      
+        <!-- Contact page JS -->
+        <script type="text/javascript" src='./js/pages/contact.js'></script>
 
         <!-- Global js -->
         <script src='./js/global.js'></script>
-</body>
+      </body>
 </html>
